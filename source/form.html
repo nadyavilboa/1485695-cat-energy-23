@@ -33,86 +33,160 @@
         <h2 class="user-form__title text-big">
           Заполните анкету, и мы подберем программу питания для вашего кота
         </h2>
-        <form class="form-pet" method="post" action="https://echo.htmlacademy.ru" id="your-pet">
-          <fieldset class="form-pet__fieldset data-cat">
-            <ul class="form-pet__list cat-list">
-              <li class="cat-list__item">
-                <label class="cat-list__label text-input" for="cat-name">Имя:*</label>
-                <input class="cat-list__input text-input" id="cat-name" type="text" name="cat-name"
-                  placeholder="Барсик" required/>
-              <li class="cat-list__item">
-                <label class="cat-list__label text-input" for="cat-weight">Вес (кг):*</label>
-                <input class="cat-list__input text-input" id="cat-weight" type="text" name="cat-weight"
-                  placeholder="7" required/>
+        <form class="form" method="post" action="https://echo.htmlacademy.ru" id="your-pet">
+          <fieldset class="form-group data-cat">
+            <legend class="form-group__title visually-hidden">
+              Заполните информацию о вашем питомце
+            </legend>
+            <ul class="form__list">
+              <li class="form__field text-field">
+                <label class="text-field__label" for="cat-name">Имя:*</label>
+                <input
+                  class="text-field__input"
+                  id="cat-name"
+                  type="text"
+                  name="cat-name"
+                  placeholder="Барсик"
+                  required/>
               </li>
-              <li class="cat-list__item">
-                <label class="cat-list__label text-input" for="cat-age">Возраст (лет):*</label>
-                <input class="cat-list__input text-input" id="cat-age" type="text" name="cat-age"
+              <li class="form__field text-field">
+                <label class="text-field__label" for="cat-weight">Вес (кг):*</label>
+                <input
+                  class="text-field__input"
+                  id="cat-weight"
+                  type="text"
+                  name="cat-weight"
+                  placeholder="7"
+                  required/>
+              </li>
+              <li class="form__field text-field">
+                <label class="text-field__label" for="cat-age">Возраст (лет):*</label>
+                <input
+                  class="text-field__input"
+                  id="cat-age"
+                  type="text"
+                  name="cat-age"
                   placeholder="7"/>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form-pet__fieldset diet-program">
-            <ul class="form-pet__list diet-list">
-              <li class="diet-list__item">
-                <input class="diet-list__input" type="radio" name="program" value="program-slimming" id="slimming" checked/>
-                <label class="diet-list__label text-big" for="slimming">Похудение</label>
+          <fieldset class="form-group diet-program">
+            <legend class="form-group__title visually-hidden">
+              Укажите предпочтительную программу питания
+            </legend>
+            <ul class="form__list">
+              <li class="form__field text-field">
+                <input
+                  class="text-field__input"
+                  type="radio"
+                  name="program"
+                  value="program-slimming"
+                  id="slimming"
+                  checked/>
+                <label class="text-field__label" for="slimming">Похудение</label>
               </li>
-              <li class="diet-list__item">
-                <input class="diet-list__input" type="radio" name="program" value="program-fatting" id="fatting"/>
-                <label class="diet-list__label text-big" for="fatting">Набор массы</label>
+              <li class="form__field text-field">
+                <input
+                  class="text-field__input"
+                  type="radio"
+                  name="program"
+                  value="program-fatting"
+                  id="fatting"/>
+                <label class="text-field__label" for="fatting">Набор массы</label>
               </li>
-              <li class="diet-list__item">
-                <input class="diet-list__input" type="radio" name="program" value="need-consultation" id="consultation"/>
-                <label class="diet-list__label text-big" for="consultation">Не знаю (нужен ваш совет)</label>
+              <li class="form__field text-field">
+                <input
+                  class="text-field__input"
+                  type="radio"
+                  name="program"
+                  value="need-consultation"
+                  id="consultation"/>
+                <label class="text-field__label" for="consultation">Не знаю (нужен ваш совет)</label>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form-pet__fieldset user-data">
-            <h2 class="form-pet__title text-big">Контактные данные (владельца кота)</h2>
-            <ul class="form-pet__list user-list">
-              <li class="user-list__item">
-                <label class="user-list__label text-input" for="user-email">E-mail:*</label>
-                <input class="user-list__input text-input" id="user-email" type="email" name="user-email"
-                  placeholder="kuklachev@gmail.com" required/>
-              <li class="user-list__item">
-                <label class="user-list__label text-input" for="user-phone">Телефон:*</label>
-                <input class="user-list__input text-input" id="user-phone" type="tel" name="user-phone"
-                  placeholder="8 (960) 900-60-90" required/>
+          <fieldset class="form-group user-data">
+            <legend class="form-group__title text-big">Контактные данные (владельца кота)</legend>
+            <ul class="form__list">
+              <li class="form__field text-field">
+                <label class="text-field__label" for="user-email">E-mail:*</label>
+                <input
+                  class="text-field__input"
+                  id="user-email"
+                  type="email"
+                  name="user-email"
+                  placeholder="kuklachev@gmail.com"
+                  required/>
+              </li>
+              <li class="form__field text-field">
+                <label class="text-field__label" for="user-phone">Телефон:*</label>
+                <input
+                  class="text-field__input"
+                  id="user-phone"
+                  type="tel"
+                  name="user-phone"
+                  placeholder="8 (960) 900-60-90"
+                  required/>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form-pet__fieldset user-text">
-            <h2 class="form-pet__title text-big">Комментарий</h2>
-            <label class="user-text__label" for="cat-description"></label>
-            <textarea class="user-text__textarea text-input" id="cat-description" name="user-text" form="your-pet"
-              placeholder="Расскажите обо всех повадках кота"></textarea>
+          <fieldset class="form-group user-text">
+            <legend class="form-group__title text-big">Комментарий</legend>
+            <label class="text-field__label" for="cat-description"></label>
+            <textarea
+              class="text-field__input"
+              id="cat-description"
+              name="user-text"
+              form="your-pet"
+              placeholder="Расскажите обо всех повадках кота">
+            </textarea>
           </fieldset>
-          <fieldset class="form-pet__fieldset food-ingredients">
-            <h2 class="form-pet__title text-big">Дополнительно</h2>
-            <ul class="form-pet__list ingredients-list">
-              <li class="ingredients-list__item">
-                <input class="food-ingredients__input" type="checkbox" name="sweetener" value="give-sweetener" id="sweetener" checked/>
-                <label class="food-ingredients__label text-big" for="sweetener">Сахарозаменитель</label>
+          <fieldset class="form-group food-ingredients">
+            <legend class="form-group__title text-big">Дополнительно</legend>
+            <ul class="form__list">
+              <li class="form__field text-field">
+                <input
+                  class="text-field__input"
+                  type="checkbox"
+                  name="sweetener"
+                  value="sweetener"
+                  id="sweetener"
+                  checked/>
+                <label class="text-field__label" for="sweetener">Сахарозаменитель</label>
               </li>
-              <li class="ingredients-list__item">
-                <input class="food-ingredients__input" type="checkbox" name="water" value="give-water" id="water"/>
-                <label class="food-ingredients__label text-big" for="water">Питьевая вода</label>
+              <li class="form__field text-field">
+                <input
+                  class="text-field__input"
+                  type="checkbox"
+                  name="water"
+                  value="water"
+                  id="water"/>
+                <label class="text-field__label" for="water">Питьевая вода</label>
               </li>
-              <li class="ingredients-list__item">
-                <input class="food-ingredients__input" type="checkbox" name="milk" value="give-milk" id="milk"/>
-                <label class="food-ingredients__label text-big" for="milk">Молоко</label>
+              <li class="form__field text-field">
+                <input
+                  class="text-field__input"
+                  type="checkbox"
+                  name="milk"
+                  value="milk"
+                  id="milk"/>
+                <label class="text-field__label" for="milk">Молоко</label>
               </li>
-              <li class="ingredients-list__item">
-                <input class="food-ingredients__input" type="checkbox" name="vitamins" value="give-vitamins" id="vitamins"/>
-                <label class="food-ingredients__label text-big" for="vitamins">Витамины</label>
+              <li class="form__field text-field">
+                <input
+                class="text-field__input"
+                  type="checkbox"
+                  name="vitamins"
+                  value="vitamins"
+                  id="vitamins"/>
+                <label class="text-field__label" for="vitamins">Витамины</label>
               </li>
             </ul>
           </fieldset>
           <button type="submit" class="form-pet__button button button--primary">
-            <span>Отправить заявку</span>
+            Отправить заявку
           </button>
-          <p class="form-pet__explanation">* — Обязательные поля</p>
+          <p class="form__note">* — Обязательные поля</p>
         </form>
       </section>
       <section class="location">
