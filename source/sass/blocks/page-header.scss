@@ -1,0 +1,23 @@
+.page-header__wrapper {
+  display: flex;
+  align-items: center;
+  padding: 12px 24px 17px 20px;
+}
+
+.page-header__logo {
+  display: flex;
+  align-items: center;
+
+  & img {
+    margin-right: 57px;
+  }
+}
+
+.page-header__toggler {
+  display: block;
+  margin: 0;
+  margin-left: 8px;
+  background-color: $basic-green;
+  width: 24px;
+  height: 16px;
+}

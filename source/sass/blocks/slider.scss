@@ -1,0 +1,31 @@
+.slider__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 27px;
+  margin-right: 25px;
+}
+
+.slider__scale {
+  width: 84px;
+  height: 14px;
+  background-color: $basic-white;
+  border-radius: 6px;
+  padding: 4px 0 4px 6px;
+  box-sizing: border-box;
+}
+
+.slider__value {
+  width: 35px;
+  height: 6px;
+  background-color: $basic-green;
+}
+
+.slider__button {
+  border: none;
+  background-color: $example-background;
+  font-family: "Oswald Regular", "Arial Regular", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}

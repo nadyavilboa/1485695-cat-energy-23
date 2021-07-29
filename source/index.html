@@ -3,17 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css"/>
   </head>
   <body class="page__body">
     <header class="page-header">
-      <a class="page-header__logo">
-        <img class="img-logo" src="img/icon-logo.svg" width="34" height="38" alt="Логотип Кэт-энерджи"/>
-        <img class="name-logo" src="img/header-logo-text.svg" width="101" height="18" alt="Текстовый логотип Кэт-энерджи"/>
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
+      <div class="page-header__wrapper">
+        <a class="page-header__logo">
+          <img class="img-logo" src="img/icon-logo.svg" width="34" height="38" alt="Логотип Кэт-энерджи"/>
+          <img class="name-logo" src="img/header-logo-text.svg" width="101" height="18" alt="Текстовый логотип Кэт-энерджи"/>
+        </a>
+        <button class="page-header__toggler" type="button">
           <span class="visually-hidden">Открыть/закрыть меню</span>
         </button>
+      </div>
+      <nav class="main-nav visually-hidden">
         <ul class="main-nav__list menu">
           <li class="menu__item menu__item--current">
             <a class="menu__link text-big">Главная</a>
@@ -104,17 +107,21 @@
           </div>
           <div class="slider__controls">
             <button class="slider__button text-big" type="button">Было</button>
-            <div class="slider__scale"></div>
+            <div class="slider__scale">
+              <div class="slider__value"></div>
+            </div>
             <button class="slider__button text-big" type="button">Стало</button>
           </div>
         </div>
       </section>
       <section class="location">
         <h2 class="visually-hidden">Расположение офиса компании</h2>
-        <p class="location__text-ad text-big">Приглашаем к сотрудничеству дилеров!</p>
-        <p class="location__text-address">
-          ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
-        </p>
+        <div class="location__text">
+          <p class="location__text-ad text-big">Приглашаем к сотрудничеству дилеров!</p>
+          <p class="location__text-address">
+            ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+          </p>
+        </div>
         <div class="location__map">
           <img src="img/map-img.png" width="320" height="362" alt="Адрес компании на карте"/>
         </div>
@@ -143,10 +150,11 @@
       </ul>
       <div class="page-footer__academy academy">
         <a class="academy__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-          <p class="academy__title">HTML Academy</p>
+          <span class="academy__title">HTML Academy</span>
           <img class="academy__logo" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип html-academy"/>
         </a>
       </div>
     </footer>
+    <script src="js/mobile-menu.js"></script>
   </body>
 </html>

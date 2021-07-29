@@ -1,0 +1,15 @@
+.page-footer {
+  display: grid;
+  padding: 20px 22px;
+}
+
+.page-footer__logo {
+  display: block;
+  padding: 19px 76px 32px;
+  border-bottom: 1px solid $border-bottom;
+}
+
+.page-footer__social-list {
+  list-style: none;
+  margin: 0;
+}

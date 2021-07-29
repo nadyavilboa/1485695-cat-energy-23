@@ -1,0 +1,22 @@
+.location__text {
+  padding: 28px 19px 26px 20px;
+  display: flex;
+
+  & > * {
+    margin: 0;
+    line-height: 20px;
+  }
+
+  &-ad {
+    font-family: "Oswald Regular", "Arial Regular", sans-serif;
+    font-size: 16px;
+    color: $special-text;
+    text-transform: uppercase;
+    margin-right: 2px;
+    padding-right: 14px;
+  }
+
+  &-address {
+    color: $text-small;
+  }
+}

@@ -1,0 +1,27 @@
+.program-description {
+  padding: 0 20px;
+  margin-top: 27px;
+  margin-bottom: 42px;
+}
+
+.program-description__title {
+  font-family: "Oswald Regular", "Arial Regular", sans-serif;
+  font-size: 36px;
+  line-height: 40px;
+  margin: 0;
+}
+
+.program-description__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 38px;
+}
+
+.program-description__item {
+  color: $text-small;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}

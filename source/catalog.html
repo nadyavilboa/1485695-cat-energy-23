@@ -3,23 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css"/>
   </head>
   <body class="page__body">
     <header class="page-header">
-      <a class="page-header__logo">
-        <img class="img-logo" src="img/icon-logo.svg" width="34" height="38" alt="Логотип Кэт-энерджи"/>
-        <img class="name-logo" src="img/header-logo-text.svg" width="101" height="18" alt="Текстовый логотип Кэт-энерджи"/>
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
+      <div class="page-header__wrapper">
+        <a class="page-header__logo">
+          <img class="img-logo" src="img/icon-logo.svg" width="34" height="38" alt="Логотип Кэт-энерджи"/>
+          <img class="name-logo" src="img/header-logo-text.svg" width="101" height="18" alt="Текстовый логотип Кэт-энерджи"/>
+        </a>
+        <button class="page-header__toggler" type="button">
           <span class="visually-hidden">Открыть/закрыть меню</span>
         </button>
+      </div>
+      <nav class="main-nav visually-hidden">
         <ul class="main-nav__list menu">
           <li class="menu__item menu__item--current">
-            <a class="menu__link text-big">Главная</a>
+            <a class="menu__link text-big" href="index.html" target="_blank">Главная</a>
           </li>
-          <li class="menu__item">
-            <a class="menu__link text-big" href="catalog.html" target="_blank">Каталог продукции</a>
+          <li class="menu__item menu__item--current">
+            <a class="menu__link text-big">Каталог продукции</a>
           </li>
           <li class="menu__item">
             <a class="menu__link text-big" href="form.html" target="_blank">Подбор программы</a>
@@ -285,10 +288,11 @@
       </ul>
       <div class="page-footer__academy academy">
         <a class="academy__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-          <p class="academy__title">HTML Academy</p>
+          <span class="academy__title">HTML Academy</span>
           <img class="academy__logo" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип html-academy"/>
         </a>
       </div>
     </footer>
+    <script src="js/mobile-menu.js"></script>
   </body>
 </html>

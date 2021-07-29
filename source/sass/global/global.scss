@@ -1,0 +1,31 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.button {
+  text-decoration: none;
+  padding: 7px 44px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.button--primary {
+  background-color: $basic-green;
+  color: $basic-white;
+  line-height: 18px;
+  font-family: "Oswald Regular", "Arial Regular", sans-serif;
+}
