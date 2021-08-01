@@ -5,23 +5,17 @@
 }
 
 .program-description__title {
-  font-family: "Oswald Regular", "Arial Regular", sans-serif;
+  font-family: $site-fonts;
   font-size: 36px;
   line-height: 40px;
+  color: $basic-black;
   margin: 0;
 }
 
 .program-description__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
   margin-top: 38px;
 }
 
-.program-description__item {
-  color: $text-small;
-
-  &:not(:last-child) {
-    margin-bottom: 20px;
-  }
+.program-description__item:not(:last-child) {
+  margin-bottom: 20px;
 }

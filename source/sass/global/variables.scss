@@ -1,3 +1,7 @@
+//Fonts
+
+$site-fonts: "Oswald", "Arial", sans-serif;
+
 // Colors global
 
 $basic-white: #ffffff;
@@ -6,12 +10,12 @@ $basic-green: #68b738;
 
 // Colors special
 
-$background-green: rgba(104, 183, 56, 0.85);
 $border-menu: #e6e6e6;
-$background-program: #f2f2f2;
+$special-background: #f2f2f2;
 $border-bottom: #d9d9d9;
-$text-small: #444444;
+$border-block: #ebebeb;
+$text-special: #444444;
 $example-background: #eaeaea;
 $special-text: #111111;
-
-$red-outline: #ff0000;
+$product-title: #222222;
+$catalog-border: #cdcdcd;

@@ -1,22 +1,23 @@
-.location__text {
+.location__description {
   padding: 28px 19px 26px 20px;
   display: flex;
+  background-color: $special-background;
+}
 
-  & > * {
-    margin: 0;
-    line-height: 20px;
-  }
+.location__description--white {
+  background-color: $basic-white;
+}
 
-  &-ad {
-    font-family: "Oswald Regular", "Arial Regular", sans-serif;
-    font-size: 16px;
-    color: $special-text;
-    text-transform: uppercase;
-    margin-right: 2px;
-    padding-right: 14px;
-  }
+.location__text {
+  margin: 0;
+  line-height: 20px;
+}
 
-  &-address {
-    color: $text-small;
-  }
+.location__text--ad {
+  font-family: $site-fonts;
+  font-size: 16px;
+  color: $special-text;
+  text-transform: uppercase;
+  margin-right: 2px;
+  padding-right: 14px;
 }

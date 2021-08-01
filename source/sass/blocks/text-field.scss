@@ -1,0 +1,9 @@
+.text-field {
+  font-family: $site-fonts;
+  font-size: 16px;
+  text-transform: uppercase;
+
+  &:not(:last-child) {
+    margin-bottom: 14px;
+  }
+}

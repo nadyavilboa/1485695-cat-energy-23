@@ -1,0 +1,14 @@
+.product__title {
+  margin: 0;
+}
+
+.product__title a {
+  font-family: $site-fonts;
+  font-size: 16px;
+  line-height: 20px;
+  color: $product-title;
+}
+
+.product__show-more {
+  padding: 25px 0;
+}

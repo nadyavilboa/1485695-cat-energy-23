@@ -4,15 +4,29 @@
   line-height: 18px;
   font-style: normal;
   font-weight: normal;
-  font-family: "Arial", "Helvetica", sans-serif;
+  font-family: "Arial", sans-serif;
+  color: $text-special;
 }
 
 .page__body {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
-  width: 320px;
   min-height: 100%;
   margin: 0;
-  outline: 1px solid $red-outline;
+  box-sizing: border-box;
+}
+
+.page__title {
+  font-family: $site-fonts;
+  font-size: 36px;
+  line-height: 36px;
+  color: $basic-black;
+  margin: 0;
+}
+
+.page__title--form {
+  padding-top: 27px;
+  padding-left: 20px;
+  border-top: 1px solid $border-block;
 }

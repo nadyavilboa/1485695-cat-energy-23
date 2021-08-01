@@ -8,35 +8,35 @@
   <body class="page__body">
     <header class="page-header">
       <div class="page-header__wrapper">
-        <a class="page-header__logo">
+        <a class="page-header__logo" href="index.html">
           <img class="img-logo" src="img/icon-logo.svg" width="34" height="38" alt="Логотип Кэт-энерджи"/>
           <img class="name-logo" src="img/header-logo-text.svg" width="101" height="18" alt="Текстовый логотип Кэт-энерджи"/>
         </a>
-        <button class="page-header__toggler" type="button">
+        <button class="page-header__toggle" type="button">
           <span class="visually-hidden">Открыть/закрыть меню</span>
         </button>
       </div>
-      <nav class="main-nav visually-hidden">
-        <ul class="main-nav__list menu">
+      <nav class="main-nav display-none">
+        <ul class="main-nav__list menu list-reset">
           <li class="menu__item menu__item--current">
-            <a class="menu__link text-big" href="index.html" target="_blank">Главная</a>
+            <a class="menu__link" href="index.html">Главная</a>
           </li>
           <li class="menu__item menu__item--current">
-            <a class="menu__link text-big">Каталог продукции</a>
+            <a class="menu__link">Каталог продукции</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link text-big" href="form.html" target="_blank">Подбор программы</a>
+            <a class="menu__link" href="form.html">Подбор программы</a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="page-main">
-      <h1 class="page-title">Каталог продукции</h1>
+      <h1 class="page__title">Каталог продукции</h1>
       <section class="catalog">
         <h2 class="visually-hidden">Список товаров и акций</h2>
-        <ul class="catalog__food-list food-list">
+        <ul class="catalog__food-list food-list list-reset">
           <li class="food-list__item product" id="food-pro">
-            <h3 class="product__title text-big">
+            <h3 class="product__title">
               <a href="#">Cat energy pro 500 г</a>
             </h3>
             <a class="product__link" href="#">
@@ -62,10 +62,10 @@
                 </dd>
               </div>
             </dl>
-            <a class="product__button button button--primary" href="#" target="_blank">Заказать</a>
+            <a class="product__button button button--primary" href="#">Заказать</a>
           </li>
           <li class="food-list__item product">
-            <h3 class="product__title text-big">
+            <h3 class="product__title">
               <a href="#">Cat energy pro 1000 г</a>
             </h3>
             <a class="product__link" href="#">
@@ -87,10 +87,10 @@
                 </dd>
               </div>
             </dl>
-            <a class="product__button button button--primary" href="#" target="_blank">Заказать</a>
+            <a class="product__button button button--primary" href="#">Заказать</a>
           </li>
           <li class="food-list__item product">
-            <h3 class="product__title text-big">
+            <h3 class="product__title">
               <a href="#">Cat energy pro 500 г</a>
             </h3>
             <a class="product__link" href="#">
@@ -112,10 +112,10 @@
                 </dd>
               </div>
             </dl>
-            <a class="product__button button button--primary" href="#" target="_blank">Заказать</a>
+            <a class="product__button button button--primary" href="#">Заказать</a>
           </li>
           <li class="food-list__item product">
-            <h3 class="product__title text-big">
+            <h3 class="product__title">
               <a href="#">Cat energy pro 1000 г</a>
             </h3>
             <a class="product__link" href="#">
@@ -137,10 +137,10 @@
                 </dd>
               </div>
             </dl>
-            <a class="product__button button button--primary" href="#" target="_blank">Заказать</a>
+            <a class="product__button button button--primary" href="#">Заказать</a>
           </li>
           <li class="food-list__item product" id="food-slim">
-            <h3 class="product__title text-big">
+            <h3 class="product__title">
               <a href="#">Cat energy slim 500 г</a>
             </h3>
             <a class="product__link" href="#">
@@ -162,10 +162,10 @@
                 </dd>
               </div>
             </dl>
-            <a class="product__button button button--primary" href="#" target="_blank">Заказать</a>
+            <a class="product__button button button--primary" href="#">Заказать</a>
           </li>
           <li class="food-list__item product">
-            <h3 class="product__title text-big">
+            <h3 class="product__title">
               <a href="#">Cat energy slim 1000 г</a>
             </h3>
             <a class="product__link" href="#">
@@ -187,10 +187,10 @@
                 </dd>
               </div>
             </dl>
-            <a class="product__button button button--primary" href="#" target="_blank">Заказать</a>
+            <a class="product__button button button--primary" href="#">Заказать</a>
           </li>
           <li class="food-list__item product">
-            <h3 class="product__title text-big">
+            <h3 class="product__title">
               <a href="#">Cat energy slim 500 г</a>
             </h3>
             <a class="product__link" href="#">
@@ -212,64 +212,77 @@
                 </dd>
               </div>
             </dl>
-            <a class="product__button button button--primary" href="#" target="_blank">Заказать</a>
+            <a class="product__button button button--primary" href="#">Заказать</a>
           </li>
           <li class="product__show-more show-more">
-            <h3 class="show-more__title text-big">Показать еще 100500 товаров</h3>
+            <h3 class="show-more__title">Показать еще 100500 товаров</h3>
             <p class="show-more__text">На самом деле вкусов гораздо больше!</p>
-            <a class="show-more__button button button--show-more" href="#" target="_blank">Показать все</a>
+            <a class="show-more__button button button--show-more" href="#">Показать все</a>
           </li>
         </ul>
       </section>
       <section class="additional-products">
-        <h2 class="catalog__title text-big">Дополнительные товары</h2>
-        <ul class="catalog__additional add-list">
+        <h2 class="additional-products__title">Дополнительные товары</h2>
+        <ul class="catalog__additional add-list list-reset">
           <li class="add-list__item add">
-            <h3 class="add__title text-big">Сахарозаменитель</h3>
-            <p class="add__count">1 упаковка (100 г)</p>
-            <p class="add__price">200 <span class="catalog__money">р.</span></p>
-            <a class="add__button button button--primary" href="#" target="_blank">Заказать</a>
+            <h3 class="add__title">Сахарозаменитель</h3>
+            <div class="add__wrapper">
+              <p class="add__count">1 упаковка (100 г)</p>
+              <p class="add__price">200 <span class="add__money">р.</span></p>
+            </div>
+            <a class="add__button button button--primary" href="#">Заказать</a>
           </li>
           <li class="add-list__item add">
-            <h3 class="add__title text-big">Питьевая вода</h3>
-            <p class="add__count">5 литров</p>
-            <p class="add__price">50 <span class="catalog__money">р.</span></p>
-            <a class="add__button button button--primary" href="#" target="_blank">Заказать</a>
+            <h3 class="add__title">Питьевая вода</h3>
+            <div class="add__wrapper">
+              <p class="add__count">5 литров</p>
+              <p class="add__price">50 <span class="add__money">р.</span></p>
+            </div>
+            <a class="add__button button button--primary" href="#">Заказать</a>
           </li>
           <li class="add-list__item add">
-            <h3 class="add__title text-big">Молоко</h3>
-            <p class="add__count">1 литр</p>
-            <p class="add__price">100 <span class="catalog__money">р.</span></p>
-            <a class="add__button button button--primary" href="#" target="_blank">Заказать</a>
+            <h3 class="add__title">Молоко</h3>
+            <div class="add__wrapper">
+              <p class="add__count">1 литр</p>
+              <p class="add__price">100 <span class="add__money">р.</span></p>
+            </div>
+            <a class="add__button button button--primary" href="#">Заказать</a>
           </li>
           <li class="add-list__item add">
-            <h3 class="add__title text-big">Витамины</h3>
-            <p class="add__count">1 упаковка (30 г)</p>
-            <p class="add__price">300 <span class="catalog__money">р.</span></p>
-            <a class="add__button button button--primary" href="#" target="_blank">Заказать</a>
+            <h3 class="add__title">Витамины</h3>
+            <div class="add__wrapper">
+              <p class="add__count">1 упаковка (30 г)</p>
+              <p class="add__price">300 <span class="add__money">р.</span></p>
+            </div>
+            <a class="add__button button button--primary" href="#">Заказать</a>
           </li>
         </ul>
         <div class="gift">
           <p class="gift__text">
-            Закажите все и получите чехол для кота в подарок!
+            Закажите все<br>
+            и получите чехол для<br>
+            кота в подарок!
           </p>
         </div>
       </section>
       <section class="location">
         <h2 class="visually-hidden">Расположение офиса компании</h2>
-        <p class="location__text-ad text-big">Приглашаем к сотрудничеству дилеров!</p>
-        <p class="location__text-address">ул. Большая
-          Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <div class="location__description">
+          <p class="location__text location__text--ad">Приглашаем к сотрудничеству дилеров!</p>
+          <p class="location__text location__text--address">
+            ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+          </p>
+        </div>
         <div class="location__map">
           <img src="img/map-img.png" width="320" height="362" alt="Адрес компании на карте"/>
         </div>
       </section>
     </main>
     <footer class="page-footer">
-      <a class="page-footer__logo">
+      <a class="page-footer__logo" href="index.html">
         <img src="img/footer-logo-text.svg" width="128" height="24" alt="Текстовый логотип Кэт-энерджи"/>
       </a>
-      <ul class="page-footer__social-list social">
+      <ul class="page-footer__social-list social list-reset">
         <li class="social__item social-link">
           <a class="social-link social-link--vk">
             <img src="img/vk-icon.svg" width="23" height="16" alt=""/>
@@ -293,6 +306,6 @@
         </a>
       </div>
     </footer>
-    <script src="js/mobile-menu.js"></script>
+    <script src="js/main.js" type="module"></script>
   </body>
 </html>

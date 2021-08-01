@@ -12,20 +12,20 @@
           <img class="img-logo" src="img/icon-logo.svg" width="34" height="38" alt="Логотип Кэт-энерджи"/>
           <img class="name-logo" src="img/header-logo-text.svg" width="101" height="18" alt="Текстовый логотип Кэт-энерджи"/>
         </a>
-        <button class="page-header__toggler" type="button">
+        <button class="page-header__toggle" type="button">
           <span class="visually-hidden">Открыть/закрыть меню</span>
         </button>
       </div>
-      <nav class="main-nav visually-hidden">
-        <ul class="main-nav__list menu">
+      <nav class="main-nav display-none">
+        <ul class="main-nav__list menu list-reset">
           <li class="menu__item menu__item--current">
-            <a class="menu__link text-big">Главная</a>
+            <a class="menu__link">Главная</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link text-big" href="catalog.html" target="_blank">Каталог продукции</a>
+            <a class="menu__link" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link text-big" href="form.html" target="_blank">Подбор программы</a>
+            <a class="menu__link" href="form.html">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -33,41 +33,41 @@
     <main class="page-main">
       <h1 class="visually-hidden">Кэт-энерджи: магазин функционального питания для котов</h1>
       <section class="promo">
-        <h2 class="promo__title text-big">Функциональное питание для котов</h2>
+        <h2 class="promo__title">Функциональное питание для котов</h2>
         <p class="promo__slogan">Занялся собой? Займись котом!</p>
         <div class="promo__img">
           <img src="img/promo-product.png" width="280" height="270" alt="На картинке упаковка корма серии pro с курицей"/>
         </div>
-        <a class="promo__link button button--primary" href="form.html" target="_blank">Подобрать программу</a>
+        <a class="promo__link button button--primary" href="form.html">Подобрать программу</a>
       </section>
       <section class="programs">
         <h2 class="visually-hidden">Список готовых программ питания</h2>
-        <ul class="programs__list">
+        <ul class="programs__list list-reset">
           <li class="programs__item program">
             <article class="program__inner">
-              <h3 class="program__title text-big">Похудение</h3>
+              <h3 class="program__title">Похудение</h3>
               <p class="program__text">
                 Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
                 Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
               </p>
-              <a class="program__link" href="catalog.html#food-pro" target="_blank">Каталог slim</a>
+              <a class="program__link" href="catalog.html#food-pro">Каталог slim</a>
             </article>
           </li>
           <li class="programs__item program">
             <article class="program__inner">
-              <h3 class="program__title text-big">Набор массы</h3>
+              <h3 class="program__title">Набор массы</h3>
               <p class="program__text">
                 Заработать авторитет среди дворовых котов и даже собак?
                 Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
               </p>
-              <a class="program__link" href="catalog.html#food-slim" target="_blank">Каталог pro</a>
+              <a class="program__link" href="catalog.html#food-slim">Каталог pro</a>
             </article>
           </li>
         </ul>
       </section>
       <section class="program-description">
-        <h2 class="program-description__title text-big">Как это работает</h2>
-        <ul class="program-description__list">
+        <h2 class="program-description__title">Как это работает</h2>
+        <ul class="program-description__list list-reset">
           <li class="program-description__item">
             Функциональное питание содержит только полезные питательные вещества.
           </li>
@@ -83,7 +83,7 @@
         </ul>
       </section>
       <section class="example">
-        <h2 class="example__title text-big">Живой пример</h2>
+        <h2 class="example__title">Живой пример</h2>
         <p class="example__text">
           Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
           Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек
@@ -91,34 +91,34 @@
         </p>
         <dl class="example__statistics stats">
           <div class="stats__wrapper">
-            <dt class="stats__description text-big">снижение веса</dt>
+            <dt class="stats__description">снижение веса</dt>
             <dd class="stats__data">5 кг</dd>
           </div>
           <div class="stats__wrapper">
-            <dt class="stats__description text-big">затрачено времени</dt>
+            <dt class="stats__description">затрачено времени</dt>
             <dd class="stats__data">60 дней</dd>
           </div>
         </dl>
-        <p class="example__price text-big">Затраты на питание: 15 000 руб.</p>
+        <p class="example__price">Затраты на питание: 15 000 руб.</p>
         <div class="example__slider slider">
           <div class="slider__photos">
-            <img src="img/before-mobile.png" width="311" height="232" alt="Фотография кота Бориса до диеты"/>
-            <img class="visually-hidden" src="img/after-mobile.png" width="251" height="240" alt="Фотография кота Бориса после диеты"/>
+            <img class="slider__img slider__img--early" src="img/before-mobile.png" width="311" height="232" alt="Фотография кота Бориса до диеты"/>
+            <img class="slider__img display-none slider__img--today" src="img/after-mobile.png" width="251" height="240" alt="Фотография кота Бориса после диеты"/>
           </div>
           <div class="slider__controls">
-            <button class="slider__button text-big" type="button">Было</button>
+            <button class="slider__button slider__button--early" type="button">Было</button>
             <div class="slider__scale">
               <div class="slider__value"></div>
             </div>
-            <button class="slider__button text-big" type="button">Стало</button>
+            <button class="slider__button slider__button--today" type="button">Стало</button>
           </div>
         </div>
       </section>
       <section class="location">
         <h2 class="visually-hidden">Расположение офиса компании</h2>
-        <div class="location__text">
-          <p class="location__text-ad text-big">Приглашаем к сотрудничеству дилеров!</p>
-          <p class="location__text-address">
+        <div class="location__description location__description--white">
+          <p class="location__text location__text--ad">Приглашаем к сотрудничеству дилеров!</p>
+          <p class="location__text location__text--address">
             ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
           </p>
         </div>
@@ -131,7 +131,7 @@
       <a class="page-footer__logo">
         <img src="img/footer-logo-text.svg" width="128" height="24" alt="Текстовый логотип Кэт-энерджи"/>
       </a>
-      <ul class="page-footer__social-list social">
+      <ul class="page-footer__social-list social list-reset">
         <li class="social__item social-link">
           <a class="social-link social-link--vk">
             <img src="img/vk-icon.svg" width="23" height="16" alt=""/>
@@ -155,6 +155,6 @@
         </a>
       </div>
     </footer>
-    <script src="js/mobile-menu.js"></script>
+    <script src="js/main.js" type="module"></script>
   </body>
 </html>

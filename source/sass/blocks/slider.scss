@@ -24,8 +24,9 @@
 .slider__button {
   border: none;
   background-color: $example-background;
-  font-family: "Oswald Regular", "Arial Regular", sans-serif;
+  font-family: $site-fonts;
   font-size: 16px;
   line-height: 20px;
+  color: $basic-black;
   text-transform: uppercase;
 }
