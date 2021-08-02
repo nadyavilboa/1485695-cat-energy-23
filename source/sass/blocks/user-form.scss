@@ -1,0 +1,22 @@
+.user-form {
+  padding: 37px 0 32px;
+}
+
+.user-form__description {
+  font-family: $site-fonts;
+  text-transform: uppercase;
+  color: $basic-black;
+  margin: 0;
+  margin-bottom: 39px;
+  padding-left: 20px;
+}
+
+.user-form__button {
+  margin-left: 20px;
+}
+
+.user-form__note {
+  line-height: 16px;
+  color: $basic-black;
+  margin-left: 20px;
+}

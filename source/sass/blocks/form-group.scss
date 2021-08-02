@@ -1,0 +1,38 @@
+.form-group {
+  border: none;
+  display: flex;
+  padding: 0 20px;
+}
+
+.form-group--cat {
+  padding-bottom: 27px;
+}
+
+.form-group--diet {
+  padding: 22px 20px 20px;
+  border-top: 1px solid $border-block;
+  border-bottom: 1px solid $border-block;
+}
+
+.form-group--user {
+  margin-top: 26px;
+  padding-top: 26px;
+  padding-bottom: 24px;
+}
+
+.form-group--comment {
+  padding-top: 38px;
+  padding-bottom: 23px;
+}
+
+.form-group--ingredients {
+  padding-top: 34px;
+  padding-bottom: 34px;
+}
+
+.form-group__title {
+  font-family: $site-fonts;
+  font-size: 24px;
+  line-height: 26px;
+  color: $basic-black;
+}

@@ -1,0 +1,19 @@
+.add__title {
+  font-family: $site-fonts;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $product-title;
+  margin: 0;
+}
+
+.add__wrapper {
+  display: flex;
+  justify-content: space-between;
+  line-height: 14px;
+}
+
+.add__money {
+  text-transform: uppercase;
+}

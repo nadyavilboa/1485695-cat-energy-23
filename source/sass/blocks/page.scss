@@ -1,0 +1,38 @@
+.page {
+  height: 100%;
+  font-size: 14px;
+  line-height: 18px;
+  font-style: normal;
+  font-weight: normal;
+  font-family: "Arial", sans-serif;
+  color: $text-special;
+}
+
+.page__body {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  min-height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.page__title {
+  font-family: $site-fonts;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  color: $basic-black;
+  margin: 0;
+}
+
+.page__title--form {
+  padding-top: 27px;
+  padding-left: 20px;
+  border-top: 1px solid $border-block;
+}
+
+.page__title--catalog {
+  margin-bottom: 41px;
+  padding-left: 20px;
+}

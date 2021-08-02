@@ -1,0 +1,18 @@
+.button {
+  padding: 7px 20px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: $site-fonts;
+  border: none;
+  background-color: rgba($basic-white, 0);
+}
+
+.button--primary {
+  background-color: $basic-green;
+  color: $basic-white;
+}
+
+.button--show-more {
+  background-color: $special-background;
+  color: $text-special;
+}

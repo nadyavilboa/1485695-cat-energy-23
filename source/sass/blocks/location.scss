@@ -1,0 +1,23 @@
+.location__description {
+  padding: 28px 19px 26px 20px;
+  display: flex;
+  background-color: $special-background;
+}
+
+.location__description--white {
+  background-color: $basic-white;
+}
+
+.location__text {
+  margin: 0;
+  line-height: 20px;
+}
+
+.location__text--ad {
+  font-family: $site-fonts;
+  font-size: 16px;
+  color: $special-text;
+  text-transform: uppercase;
+  margin-right: 2px;
+  padding-right: 14px;
+}

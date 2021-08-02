@@ -3,42 +3,46 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css"/>
   </head>
   <body class="page__body">
     <header class="page-header">
-      <a class="page-header__logo">
-        <img class="img-logo" src="img/icon-logo.svg" width="34" height="38" alt="Логотип Кэт-энерджи"/>
-        <img class="name-logo" src="img/header-logo-text.svg" width="101" height="18" alt="Текстовый логотип Кэт-энерджи"/>
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
+      <div class="page-header__wrapper">
+        <a class="page-header__logo" href="index.html">
+          <img class="img-logo" src="img/icon-logo.svg" width="34" height="38" alt="Логотип Кэт-энерджи"/>
+          <img class="name-logo" src="img/header-logo-text.svg" width="101" height="18" alt="Текстовый логотип Кэт-энерджи"/>
+        </a>
+        <button class="page-header__toggle" type="button">
           <span class="visually-hidden">Открыть/закрыть меню</span>
         </button>
-        <ul class="main-nav__list menu">
+      </div>
+      <nav class="main-nav display-none">
+        <ul class="main-nav__list menu list-reset">
+          <li class="menu__item">
+            <a class="menu__link" href="index.html">Главная</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="catalog.html">Каталог продукции</a>
+          </li>
           <li class="menu__item menu__item--current">
-            <a class="menu__link text-big">Главная</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link text-big" href="catalog.html" target="_blank">Каталог продукции</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link text-big" href="form.html" target="_blank">Подбор программы</a>
+            <a class="menu__link">Подбор программы</a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="page-main">
-      <h1 class="page-title">Подбор программы</h1>
+      <h1 class="page__title page__title--form">Подбор программы</h1>
       <section class="user-form">
-        <h2 class="user-form__title text-big">
-          Заполните анкету, и мы подберем программу питания для вашего кота
-        </h2>
+        <p class="user-form__description">
+          Заполните анкету, и мы подберем <br>
+          программу питания для вашего кота
+        </p>
         <form class="form" method="post" action="https://echo.htmlacademy.ru" id="your-pet">
-          <fieldset class="form-group data-cat">
+          <fieldset class="form-group form-group--cat">
             <legend class="form-group__title visually-hidden">
               Заполните информацию о вашем питомце
             </legend>
-            <ul class="form__list">
+            <ul class="form__list list-reset">
               <li class="form__field text-field">
                 <label class="text-field__label" for="cat-name">Имя:*</label>
                 <input
@@ -70,11 +74,11 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form-group diet-program">
+          <fieldset class="form-group form-group--diet">
             <legend class="form-group__title visually-hidden">
               Укажите предпочтительную программу питания
             </legend>
-            <ul class="form__list">
+            <ul class="form__list list-reset">
               <li class="form__field text-field">
                 <input
                   class="text-field__input"
@@ -105,9 +109,12 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form-group user-data">
-            <legend class="form-group__title text-big">Контактные данные (владельца кота)</legend>
-            <ul class="form__list">
+          <fieldset class="form-group form-group--user">
+            <legend class="form-group__title">
+              Контактные данные <br>
+              (владельца кота)
+            </legend>
+            <ul class="form__list list-reset">
               <li class="form__field text-field">
                 <label class="text-field__label" for="user-email">E-mail:*</label>
                 <input
@@ -130,20 +137,20 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form-group user-text">
-            <legend class="form-group__title text-big">Комментарий</legend>
-            <label class="text-field__label" for="cat-description"></label>
+          <fieldset class="form-group form-group--comment">
+            <legend class="form-group__title">Комментарий</legend>
+            <label class="text-field__label visually-hidden" for="cat-description"></label>
             <textarea
-              class="text-field__input"
+              class="text-field__input text-field__input--textarea"
               id="cat-description"
               name="user-text"
               form="your-pet"
               placeholder="Расскажите обо всех повадках кота">
             </textarea>
           </fieldset>
-          <fieldset class="form-group food-ingredients">
-            <legend class="form-group__title text-big">Дополнительно</legend>
-            <ul class="form__list">
+          <fieldset class="form-group form-group--ingredients">
+            <legend class="form-group__title">Дополнительно</legend>
+            <ul class="form__list list-reset">
               <li class="form__field text-field">
                 <input
                   class="text-field__input"
@@ -183,27 +190,30 @@
               </li>
             </ul>
           </fieldset>
-          <button type="submit" class="form-pet__button button button--primary">
+          <button type="submit" class="user-form__button button button--primary">
             Отправить заявку
           </button>
-          <p class="form__note">* — Обязательные поля</p>
+          <p class="user-form__note">* — Обязательные поля</p>
         </form>
       </section>
       <section class="location">
         <h2 class="visually-hidden">Расположение офиса компании</h2>
-        <p class="location__text-ad text-big">Приглашаем к сотрудничеству дилеров!</p>
-        <p class="location__text-address">ул. Большая
-          Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <div class="location__description">
+          <p class="location__text location__text--ad">Приглашаем к сотрудничеству дилеров!</p>
+          <p class="location__text location__text--address">
+            ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+          </p>
+        </div>
         <div class="location__map">
           <img src="img/map-img.png" width="320" height="362" alt="Адрес компании на карте"/>
         </div>
       </section>
     </main>
     <footer class="page-footer">
-      <a class="page-footer__logo">
+      <a class="page-footer__logo" href="index.html">
         <img src="img/footer-logo-text.svg" width="128" height="24" alt="Текстовый логотип Кэт-энерджи"/>
       </a>
-      <ul class="page-footer__social-list social">
+      <ul class="page-footer__social-list social list-reset">
         <li class="social__item social-link">
           <a class="social-link social-link--vk">
             <img src="img/vk-icon.svg" width="23" height="16" alt=""/>
@@ -216,16 +226,17 @@
         </li>
         <li class="social__item social-link">
           <a class="social-link social-link--facebook">
-            <img src="img/fb-icon.svg" width="22" height="22" alt=""/>
+            <img src="img/fb-icon.svg" width="10" height="18" alt=""/>
           </a>
         </li>
       </ul>
       <div class="page-footer__academy academy">
         <a class="academy__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-          <p class="academy__title">HTML Academy</p>
+          <span class="academy__title">HTML Academy</span>
           <img class="academy__logo" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип html-academy"/>
         </a>
       </div>
     </footer>
+    <script src="js/main.js" type="module"></script>
   </body>
 </html>

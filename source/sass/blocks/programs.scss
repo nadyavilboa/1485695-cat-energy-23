@@ -1,0 +1,51 @@
+.programs {
+  margin-top: 22px;
+}
+
+.programs__item {
+  background-color: $special-background;
+  padding: 30px 33px 18px 20px;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.program__title {
+  margin: 0;
+  font-family: $site-fonts;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+  color: $basic-black;
+}
+
+.program__text {
+  padding-bottom: 23px;
+  border-bottom: 1px solid $border-bottom;
+  margin: 0;
+  margin-top: 22px;
+  margin-bottom: 15px;
+}
+
+.program__link {
+  font-family: $site-fonts;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $basic-black;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    vertical-align: baseline;
+    width: 24px;
+    height: 12px;
+    background:
+      url("../img/icon_arrow.png")
+      no-repeat
+      0 0;
+    margin-left: 15px;
+  }
+}

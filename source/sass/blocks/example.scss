@@ -1,0 +1,36 @@
+.example {
+  padding: 27px 20px 25px;
+  background-color: $example-background;
+}
+
+.example__title {
+  font-family: $site-fonts;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  color: $basic-black;
+  margin: 0;
+}
+
+.example__text {
+  margin: 0;
+  margin-top: 33px;
+  margin-bottom: 25px;
+}
+
+.example__statistics {
+  margin-top: 25px;
+  margin-bottom: 26px;
+}
+
+.example__price {
+  font-family: $site-fonts;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $basic-black;
+  text-align: center;
+}
+
+.example__slider {
+  margin-top: 23px;
+}
