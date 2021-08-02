@@ -1,4 +1,21 @@
+.product-description {
+  order: 1;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .product-description__item {
   font-size: 12px;
   line-height: 16px;
+  display: flex;
+  justify-content: space-between;
+
+  &:not(:last-child) {
+    margin-bottom: 6px;
+  }
 }

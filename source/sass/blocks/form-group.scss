@@ -1,7 +1,7 @@
 .form-group {
   border: none;
   display: flex;
-  padding: 0;
+  padding: 0 20px;
 }
 
 .form-group--cat {
@@ -9,12 +9,13 @@
 }
 
 .form-group--diet {
-  padding: 22px 0 20px;
+  padding: 22px 20px 20px;
   border-top: 1px solid $border-block;
   border-bottom: 1px solid $border-block;
 }
 
 .form-group--user {
+  margin-top: 26px;
   padding-top: 26px;
   padding-bottom: 24px;
 }
