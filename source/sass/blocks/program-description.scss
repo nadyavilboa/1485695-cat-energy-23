@@ -17,6 +17,32 @@
   margin-top: 38px;
 }
 
+@media (min-width: $tablet-width) {
+  .program-description__list {
+    display: flex;
+  }
+}
+
 .program-description__item:not(:last-child) {
   margin-bottom: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .program-description__item:nth-child(2n-1) {
+    margin-right: 153px;
+  }
+
+  .program-description__item:nth-child(2n) {
+    margin-right: 90px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .program-description__list {
+    justify-content: space-between;
+  }
+
+  .program-description__item {
+    margin-right: 0;
+  }
 }

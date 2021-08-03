@@ -1,5 +1,24 @@
 .programs {
   margin-top: 22px;
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .programs__list {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .programs__item:not(:last-child) {
+    margin-right: 80px;
+  }
 }
 
 .programs__item {
