@@ -1,51 +1,91 @@
 .programs {
-  margin-top: 22px;
-  padding: 0 20px;
+  padding-top: 22px;
 
   @media (min-width: $tablet-width) {
     margin-top: 0;
-    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 82px;
   }
 }
 
-@media (min-width: $desktop-width) {
-  .programs__list {
+.programs__list {
+  @media (min-width: $desktop-width2) {
     display: flex;
     justify-content: space-between;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .programs__item:not(:last-child) {
-    margin-right: 80px;
+    flex-wrap: wrap;
   }
 }
 
 .programs__item {
   background-color: $special-background;
   padding: 30px 33px 18px 20px;
+  margin-bottom: 20px;
 
-  &:not(:last-child) {
-    margin-bottom: 20px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    &:last-child {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media (min-width: $desktop-width2) {
+    width: calc(50% - 40px);
+    margin-bottom: 30px;
   }
 }
 
 .program__title {
   margin: 0;
+  margin-bottom: 22px;
   font-family: $site-fonts;
   font-weight: 400;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
   color: $basic-black;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-column-gap: 19px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  &::before {
+    content: "";
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
+
+.program__title--sit::before {
+  width: 50px;
+  height: 53px;
+  background-image: url("../img/cat_sit.png");
+}
+
+.program__title--go::before {
+  width: 67px;
+  height: 50px;
+  background-image: url("../img/cat_go.png");
 }
 
 .program__text {
   padding-bottom: 23px;
   border-bottom: 1px solid $border-bottom;
   margin: 0;
-  margin-top: 22px;
   margin-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .program__link {
@@ -66,5 +106,10 @@
       no-repeat
       0 0;
     margin-left: 15px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
   }
 }

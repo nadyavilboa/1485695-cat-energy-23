@@ -1,6 +1,14 @@
 .example {
-  padding: 27px 20px 25px;
+  padding-top: 27px;
+  padding-bottom: 25px;
   background-color: $example-background;
+
+  @media (min-width: $desktop-width2) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 135px;
+  }
 }
 
 .example__title {
@@ -10,12 +18,47 @@
   line-height: 40px;
   color: $basic-black;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: $desktop-width2) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
 }
 
 .example__text {
   margin: 0;
   margin-top: 33px;
   margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width2) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin-top: 0;
+  }
+}
+
+.example__wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width2) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    display: grid;
+  }
 }
 
 .example__statistics {
@@ -29,6 +72,25 @@
   text-transform: uppercase;
   color: $basic-black;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    font-size: 20px;
+  }
+
+  @media (min-width: $desktop-width2) {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+  }
+}
+
+.example__price--name {
+  @media (min-width: $desktop-width2) {
+    margin-right: 63px;
+  }
 }
 
 .example__slider {

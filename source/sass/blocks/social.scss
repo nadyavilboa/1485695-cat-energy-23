@@ -1,7 +1,11 @@
 .social {
-  padding: 20px 76px;
+  padding: 20px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid $border-bottom;
+
+  @media (min-width: $tablet-width) {
+    border-bottom: none;
+  }
 }

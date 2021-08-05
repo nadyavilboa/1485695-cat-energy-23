@@ -1,12 +1,14 @@
 .main-nav {
   margin: 0;
   position: absolute;
+  width: 100%;
   z-index: 5;
 
   @media (min-width: $tablet-width) {
     display: block;
     position: inherit;
     z-index: 0;
+    width: max-content;
   }
 }
 

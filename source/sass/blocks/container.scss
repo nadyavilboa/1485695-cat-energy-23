@@ -1,0 +1,29 @@
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: $mobile-width2;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 30px;
+    max-width: none;
+  }
+}
+
+.container--promo {
+  @media (min-width: $tablet-width) {
+    padding-left: 90px;
+  }
+
+  @media (min-width: $desktop-width2) {
+    padding-left: 160px;
+  }
+}
+
+.container--footer {
+  display: grid;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}

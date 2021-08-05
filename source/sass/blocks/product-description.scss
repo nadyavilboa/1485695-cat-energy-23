@@ -14,8 +14,9 @@
   line-height: 16px;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 6px;
 
-  &:not(:last-child) {
-    margin-bottom: 6px;
+  &:last-child {
+    margin-bottom: 0;
   }
 }

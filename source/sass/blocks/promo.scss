@@ -1,27 +1,22 @@
 .promo {
+  position: relative;
   background-image: url("../img/promo-background.png");
   background-repeat: no-repeat;
   background-position: center 0;
-  background-color: rgba($basic-green, 0.85);
   color: $basic-white;
   text-align: center;
-  padding: 27px 20px 0 20px;
+  padding-top: 27px;
 
   @media (min-width: $tablet-width) {
-    background-color: $basic-white;
-    background-image: url("../img/promo-product-tablet.png");
-    background-repeat: no-repeat;
-    background-position: center 100%;
+    background: none;
     color: $basic-black;
     text-align: left;
-    min-height: 810px;
-    padding: 35px 30px 0 30px;
+    padding-bottom: 526px;
+    padding-top: 62px;
   }
 
   @media (min-width: $desktop-width) {
-    background-image: url("../img/promo-product-desktop.png");
-    background-position: 60% center;
-    min-height: 554px;
+    padding-bottom: 0;
   }
 }
 
@@ -36,16 +31,15 @@
     font-size: 60px;
     line-height: 60px;
     margin-bottom: 41px;
-    margin-left: 90px;
   }
 
   @media (min-width: $desktop-width) {
     margin-top: 70px;
-    margin-left: 160px;
   }
 }
 
 .promo__slogan {
+  margin: 0;
   font-family: $site-fonts;
   line-height: 14px;
   text-transform: uppercase;
@@ -54,31 +48,37 @@
     font-size: 20px;
     line-height: 20px;
     margin-bottom: 49px;
-    margin-left: 90px;
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 52px;
-    margin-left: 160px;
   }
 }
 
-.promo__img {
+.promo__img img {
   @media (min-width: $tablet-width) {
-    display: none;
-  }
-}
-
-.promo__link {
-  @media (min-width: $tablet-width) {
-    margin-left: 90px;
-    padding: 14px 20px;
-    font-size: 20px;
-    line-height: 20px;
+    position: absolute;
+    z-index: -5;
+    width: 709px;
+    height: 609px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 160px;
+    top: 0;
+    left: 50%;
+    width: 552px;
+    height: 499px;
+  }
+}
+
+
+.promo__link {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: 244px;
+    font-size: 20px;
+    line-height: 20px;
   }
 }
 
