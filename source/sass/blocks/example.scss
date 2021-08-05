@@ -3,7 +3,7 @@
   padding-bottom: 25px;
   background-color: $example-background;
 
-  @media (min-width: $desktop-width2) {
+  @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -24,7 +24,7 @@
     line-height: 60px;
   }
 
-  @media (min-width: $desktop-width2) {
+  @media (min-width: $desktop-width) {
     grid-column-start: 1;
     grid-column-end: 2;
   }
@@ -40,7 +40,7 @@
     line-height: 24px;
   }
 
-  @media (min-width: $desktop-width2) {
+  @media (min-width: $desktop-width) {
     grid-column-start: 1;
     grid-column-end: 2;
     margin-top: 0;
@@ -54,7 +54,7 @@
     align-items: center;
   }
 
-  @media (min-width: $desktop-width2) {
+  @media (min-width: $desktop-width) {
     grid-column-start: 1;
     grid-column-end: 2;
     display: grid;
@@ -80,7 +80,7 @@
     font-size: 20px;
   }
 
-  @media (min-width: $desktop-width2) {
+  @media (min-width: $desktop-width) {
     flex-direction: row;
     justify-content: space-between;
     text-align: center;
@@ -88,7 +88,7 @@
 }
 
 .example__price--name {
-  @media (min-width: $desktop-width2) {
+  @media (min-width: $desktop-width) {
     margin-right: 63px;
   }
 }

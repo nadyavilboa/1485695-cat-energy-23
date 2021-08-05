@@ -10,7 +10,7 @@
   margin-left: 27px;
   margin-right: 25px;
 
-  @media (min-width: $desktop-width2) {
+  @media (min-width: $desktop-width) {
     margin: 0;
   }
 }
@@ -29,7 +29,7 @@
     padding: 0;
   }
 
-  @media (min-width: $desktop-width2) {
+  @media (min-width: $desktop-width) {
     margin: 0 11px;
   }
 }
