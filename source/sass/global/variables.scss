@@ -2,6 +2,11 @@
 
 $site-fonts: "Oswald", "Arial", sans-serif;
 
+//Viewports
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1280px;
+
 // Colors global
 
 $basic-white: #ffffff;
@@ -19,4 +24,5 @@ $example-background: #eaeaea;
 $special-text: #111111;
 $product-title: #222222;
 $border-input: #e7e7e7;
-$catalog-border: #cdcdcd;
+$special-border: #cdcdcd;
+$line-scale: #dcdcdc;

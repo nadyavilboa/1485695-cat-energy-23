@@ -1,9 +1,18 @@
+.slider__photos {
+  display: flex;
+  justify-content: center;
+}
+
 .slider__controls {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-left: 27px;
   margin-right: 25px;
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
 }
 
 .slider__scale {
@@ -12,13 +21,44 @@
   background-color: $basic-white;
   border-radius: 6px;
   padding: 4px 0 4px 6px;
-  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    width: 428px;
+    height: 6px;
+    background-color: $line-scale;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 11px;
+  }
 }
 
 .slider__value {
   width: 35px;
   height: 6px;
   background-color: $basic-green;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    left: 200px;
+    top: -15px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: $basic-white;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 13px;
+      top: 13px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $basic-green;
+    }
+  }
 }
 
 .slider__button {
@@ -29,4 +69,11 @@
   line-height: 20px;
   color: $basic-black;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    border-bottom: 1px dotted rgba($basic-black, 0.4);
+    padding: 0;
+  }
 }
