@@ -26,12 +26,17 @@
 }
 
 .page__title--form {
-  padding-top: 27px;
-  padding-left: 20px;
   border-top: 1px solid $border-block;
+  margin-bottom: 37px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    border-top: none;
+    margin-bottom: 54px;
+  }
 }
 
 .page__title--catalog {
   margin-bottom: 41px;
-  padding-left: 20px;
 }

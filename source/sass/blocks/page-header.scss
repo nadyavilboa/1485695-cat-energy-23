@@ -22,11 +22,18 @@
   }
 }
 
-
 .page-header__logo--img {
   @media (min-width: $tablet-width) {
     margin-right: 12px;
   }
+}
+
+.page-header__logo:hover {
+  opacity: 0.8;
+}
+
+.page-header__logo:focus {
+  opacity: 0.6;
 }
 
 .page-header__toggle {
@@ -46,9 +53,9 @@
 }
 
 .page--header__toggle--open {
-  background-image: url("../img/toggle_mobile.png");
+  background-image: url("../img/toggle_mobile.svg");
 }
 
 .page--header__toggle--close {
-  background-image: url("../img/close_mobile.png");
+  background-image: url("../img/close_mobile.svg");
 }

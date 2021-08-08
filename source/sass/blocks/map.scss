@@ -1,0 +1,48 @@
+.map {
+  position: relative;
+  padding: 0;
+
+  @media (min-width: $desktop-width) {
+    order: -1;
+  }
+}
+
+.map__img {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  object-fit: cover;
+  z-index: -5;
+  position: absolute;
+
+  @media (min-width: $desktop-width) {
+    z-index: -10;
+  }
+}
+
+.map__img img {
+  display: block;
+  margin: 0 auto;
+}
+
+.map__google {
+  margin: 0 auto;
+  width: 100%;
+  padding: 0;
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -5;
+  }
+}
+
+.map__google iframe {
+  height: 362px;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    min-height: 400px;
+  }
+}

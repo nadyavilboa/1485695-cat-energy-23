@@ -15,7 +15,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 160px;
+    padding-left: 80px;
   }
 }
 
@@ -25,5 +25,17 @@
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.container--form {
+  padding: 0;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 80px;
+    padding-bottom: 69px;
   }
 }

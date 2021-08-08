@@ -1,10 +1,42 @@
 .add-list {
   margin-bottom: 36px;
+  border-top: 1px solid $special-border;
+  border-bottom: 1px solid $special-border;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 28px;
+    margin-bottom: 69px;
+    border: 1px solid $special-border;
+  }
+
+  @media (min-width: $desktop-width) {
+    border: none;
+    padding-bottom: 0;
+  }
 }
 
 .add-list__item {
-  padding-top: 19px;
-  padding-bottom: 13px;
-  border-top: 1px solid $special-border;
+  padding-top: 13px;
+  padding-bottom: 19px;
   border-bottom: 1px solid $special-border;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 26px 38px 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 16px 0;
+
+    &:first-child {
+      border-top: 1px solid $special-border;
+    }
+
+    &:last-child {
+      border-bottom: 1px solid $special-border;
+    }
+  }
 }

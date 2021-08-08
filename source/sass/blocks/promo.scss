@@ -16,6 +16,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding-top: 111px;
     padding-bottom: 0;
   }
 }
@@ -31,10 +32,6 @@
     font-size: 60px;
     line-height: 60px;
     margin-bottom: 41px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-top: 70px;
   }
 }
 
@@ -55,7 +52,7 @@
   }
 }
 
-.promo__img img {
+.promo__img {
   @media (min-width: $tablet-width) {
     position: absolute;
     z-index: -5;

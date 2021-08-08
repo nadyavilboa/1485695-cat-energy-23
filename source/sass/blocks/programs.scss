@@ -20,7 +20,7 @@
 
 .programs__item {
   background-color: $special-background;
-  padding: 30px 33px 18px 20px;
+  padding: 24px 33px 18px 13px;
   margin-bottom: 20px;
 
   &:last-child {
@@ -31,11 +31,13 @@
     &:last-child {
       margin-bottom: 30px;
     }
+    padding: 77px 62px 53px 52px;
   }
 
   @media (min-width: $desktop-width) {
     width: calc(50% - 40px);
     margin-bottom: 30px;
+    padding: 41px 51px 55px 52px;
   }
 }
 
@@ -67,13 +69,13 @@
 .program__title--sit::before {
   width: 50px;
   height: 53px;
-  background-image: url("../img/cat_sit.png");
+  background-image: url("../img/cat_sit.svg");
 }
 
 .program__title--go::before {
   width: 67px;
   height: 50px;
-  background-image: url("../img/cat_go.png");
+  background-image: url("../img/cat_go.svg");
 }
 
 .program__text {
@@ -85,6 +87,9 @@
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 24px;
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: auto;
   }
 }
 
@@ -102,10 +107,22 @@
     width: 24px;
     height: 12px;
     background:
-      url("../img/icon_arrow.png")
+      url("../img/icon_arrow.svg")
       no-repeat
       0 0;
     margin-left: 15px;
+  }
+
+  &:hover {
+    &::after {
+      width: 32px;
+      height: 12px;
+      background-image: url("../img/icon_arrow-hover.svg");
+    }
+  }
+
+  &:focus {
+    opacity: 0.3;
   }
 
   @media (min-width: $tablet-width) {

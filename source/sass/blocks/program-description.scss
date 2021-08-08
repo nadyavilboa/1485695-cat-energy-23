@@ -31,6 +31,7 @@
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: space-between;
+    max-width: 1444px;
   }
 }
 
@@ -55,7 +56,6 @@
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: column;
-    min-width: 200px;
     max-width: 250px;
     font-size: 16px;
     line-height: 24px;
@@ -72,7 +72,7 @@
 
 .program-description__item--leaf {
   &::before {
-    background-image: url("../img/leaf.png");
+    background-image: url("../img/leaf.svg");
   }
 
   @media (min-width: $tablet-width) {
@@ -82,7 +82,7 @@
 
 .program-description__item--fluid {
   &::before {
-    background-image: url("../img/fluid.png");
+    background-image: url("../img/fluid.svg");
   }
 
   @media (min-width: $tablet-width) {
@@ -92,7 +92,7 @@
 
 .program-description__item--cutlery {
   &::before {
-    background-image: url("../img/cutlery.png");
+    background-image: url("../img/cutlery.svg");
   }
 
   @media (min-width: $tablet-width) {
@@ -102,7 +102,7 @@
 
 .program-description__item--clock {
   &::before {
-    background-image: url("../img/clock.png");
+    background-image: url("../img/clock.svg");
   }
 
   @media (min-width: $tablet-width) {

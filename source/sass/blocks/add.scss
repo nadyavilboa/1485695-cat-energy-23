@@ -1,3 +1,25 @@
+.add {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-column-gap: 38px;
+  }
+}
+
+.add__wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-column-gap: 80px;
+  }
+}
+
 .add__title {
   font-family: $site-fonts;
   font-size: 16px;
@@ -6,14 +28,57 @@
   text-transform: uppercase;
   color: $product-title;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
-.add__wrapper {
+.add__wrapper-text {
   display: flex;
   justify-content: space-between;
   line-height: 14px;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-column-gap: 120px;
+  }
+}
+
+.add__count {
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    margin-right: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 0;
+    text-align: left;
+  }
+}
+
+.add__price {
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+  }
 }
 
 .add__money {
   text-transform: uppercase;
+}
+
+.add__button {
+  width: 100%;
+
+  @media (min-width: $desktop-width) {
+    width: 244px;
+    display: inline-flex;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
 }

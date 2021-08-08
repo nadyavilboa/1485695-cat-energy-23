@@ -1,10 +1,32 @@
 .text-field {
   margin-bottom: 14px;
+  overflow: hidden;
   display: flex;
+  align-items: center;
 
   &:last-child {
     margin-bottom: 0;
   }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.text-field--user {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.text-field__wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid $border-input;
+  margin-left: 13px;
+  padding-right: 15px;
 }
 
 .text-field__label,
@@ -13,11 +35,19 @@
   font-size: 16px;
   color: $text-special;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
 }
 
 .text-field__input {
-  border: 1px solid $border-input;
-  margin-left: 13px;
+  border: none;
+  width: 100%;
+  padding: 13px 15px 15px;
+}
+
+.text-field__icon {
+  display: inline-flex;
+  width: 20px;
 }
 
 .text-field__label--radio,
@@ -55,21 +85,23 @@
   background-color: $basic-green;
   border-radius: 50%;
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 8px;
+  left: 8px;
 }
 
 .text-field__input--checkbox:checked ~ .text-field__label--checkbox::after {
   content: "";
-  width: 18px;
-  height: 14px;
-  background-image: url("../img/checkbox.png");
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/check.svg");
   background-repeat: no-repeat;
   position: absolute;
-  top: 10px;
-  left: 8px;
+  top: 4px;
+  left: 4px;
 }
 
 .text-field__input--textarea {
   resize: vertical;
+  margin: 0;
+  border: 1px solid $border-input;
 }
