@@ -22,16 +22,18 @@
   background-color: $special-background;
   padding: 24px 33px 18px 13px;
   margin-bottom: 20px;
+  position: relative;
 
   &:last-child {
     margin-bottom: 0;
   }
 
   @media (min-width: $tablet-width) {
+    padding: 77px 62px 53px 52px;
+
     &:last-child {
       margin-bottom: 30px;
     }
-    padding: 77px 62px 53px 52px;
   }
 
   @media (min-width: $desktop-width) {
@@ -42,6 +44,9 @@
 }
 
 .program__title {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-column-gap: 19px;
   margin: 0;
   margin-bottom: 22px;
   font-family: $site-fonts;
@@ -50,19 +55,16 @@
   line-height: 37px;
   text-transform: uppercase;
   color: $basic-black;
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  grid-column-gap: 19px;
-
-  @media (min-width: $tablet-width) {
-    font-size: 36px;
-    line-height: 36px;
-  }
 
   &::before {
     content: "";
     background-repeat: no-repeat;
     background-position: 0 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
   }
 }
 

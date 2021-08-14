@@ -11,22 +11,49 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
 .text-field--user {
   @media (min-width: $tablet-width) {
-    margin-bottom: 0;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &:last-child {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.text-field--checkbox {
+  @media (min-width: $desktop-width) {
+    &:last-child {
+      margin-bottom: 20px;
+    }
   }
 }
 
 .text-field__wrapper {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
   border: 1px solid $border-input;
   margin-left: 13px;
   padding-right: 15px;
+
+  &:hover {
+    border: 1px solid $special-border;
+  }
 }
 
 .text-field__label,
@@ -41,8 +68,14 @@
 
 .text-field__input {
   border: none;
-  width: 100%;
   padding: 13px 15px 15px;
+}
+
+.text-field__input::placeholder {
+  font-family: $site-fonts;
+  font-size: 16px;
+  color: $text-special;
+  text-transform: uppercase;
 }
 
 .text-field__icon {
@@ -91,17 +124,24 @@
 
 .text-field__input--checkbox:checked ~ .text-field__label--checkbox::after {
   content: "";
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 14px;
   background-image: url("../img/check.svg");
   background-repeat: no-repeat;
   position: absolute;
-  top: 4px;
-  left: 4px;
+  top: 8px;
+  left: 6px;
+
+  @media (min-width: $tablet-width) {
+    width: 26px;
+    height: 26px;
+  }
 }
 
 .text-field__input--textarea {
+  width: 100%;
   resize: vertical;
   margin: 0;
   border: 1px solid $border-input;
 }
+

@@ -41,6 +41,7 @@
 .map__google iframe {
   height: 362px;
   width: 100%;
+  border: none;
 
   @media (min-width: $tablet-width) {
     min-height: 400px;

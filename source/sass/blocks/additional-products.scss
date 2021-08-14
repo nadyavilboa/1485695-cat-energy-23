@@ -8,14 +8,6 @@
   }
 }
 
-.additional-products__wrapper {
-  @media (min-width: $desktop-width) {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-column-gap: 80px;
-  }
-}
-
 .additional-products__title {
   font-family: $site-fonts;
   font-size: 24px;
@@ -31,5 +23,13 @@
     line-height: 36px;
     border-top: none;
     margin-bottom: 80px;
+  }
+}
+
+.additional-products__wrapper {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 80px;
   }
 }

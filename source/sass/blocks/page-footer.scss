@@ -11,6 +11,16 @@
   }
 }
 
+.page-footer__wrapper {
+  display: grid;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
 .page-footer__logo {
   display: flex;
   align-items: center;

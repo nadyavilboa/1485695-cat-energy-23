@@ -5,37 +5,10 @@
 
   @media (min-width: $tablet-width) {
     padding: 0 30px;
-    max-width: none;
-  }
-}
-
-.container--promo {
-  @media (min-width: $tablet-width) {
-    padding-left: 90px;
+    max-width: 768px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 80px;
-  }
-}
-
-.container--footer {
-  display: grid;
-
-  @media (min-width: $tablet-width) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-
-.container--form {
-  padding: 0;
-
-  @media (min-width: $desktop-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 80px;
-    padding-bottom: 69px;
+    max-width: 1280px;
   }
 }

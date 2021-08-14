@@ -8,6 +8,7 @@
   padding-top: 27px;
 
   @media (min-width: $tablet-width) {
+    padding-left: 90px;
     background: none;
     color: $basic-black;
     text-align: left;
@@ -16,6 +17,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding-left: 80px;
     padding-top: 111px;
     padding-bottom: 0;
   }

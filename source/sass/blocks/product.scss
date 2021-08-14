@@ -1,68 +1,55 @@
 .product {
-  width: 100%;
   display: grid;
-
-  @media (max-width: 767px) {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: max-content max-content;
-  }
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: max-content max-content;
 
   @media (min-width: $tablet-width) {
-    max-width: 324px;
-    grid-template-columns: 1fr;
-    grid-template-rows: max-content max-content max-content max-content;
+    display: flex;
+    flex-direction: column;
   }
 }
 
 .product__link {
   order: 0;
+  grid-row-start: 1;
+  grid-row-end: 3;
   display: flex;
   align-items: center;
   min-width: 140px;
 
-  @media (max-width: 767px) {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 3;
+  @media (min-width: $tablet-width) {
+    justify-content: center;
+    margin-bottom: 34px;
   }
 
-  @media (min-width: $tablet-width) {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    justify-content: center;
-    min-height: 100px; //это временная константа, размеры картинок изменятся
+  @media (min-width: $desktop-width) {
+    margin-bottom: 46px;
   }
 }
 
 .product__title {
   margin: 0;
-  order: 0;
+  margin-bottom: 18px;
+  order: 1;
   font-family: $site-fonts;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-
-  @media (max-width: 767px) {
-    grid-column-start: 2;
-    grid-column-end: 3;
-  }
+  grid-column-start: 2;
+  grid-column-end: 3;
 
   @media (min-width: $tablet-width) {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
     text-align: center;
-    padding: 34px 36px 21px 43px;
+    padding-left: 43px;
+    padding-right: 36px;
+    margin-bottom: 21px;
     font-size: 20px;
     line-height: 24px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 49px 15px 22px 20px;
+    padding-left: 20px;
+    padding-right: 15px;
     font-size: 20px;
     line-height: 21px;
   }
@@ -76,10 +63,13 @@
 .product__button {
   order: 2;
   width: 100%;
+  grid-column-start: 1;
+  grid-column-end: 3;
 
-  @media (max-width: 767px) {
-    grid-column-start: 1;
-    grid-column-end: 3;
+  @media (min-width: $tablet-width) {
+    margin-top: auto;
+    font-size: 16px;
+    line-height: 20px;
   }
 }
 

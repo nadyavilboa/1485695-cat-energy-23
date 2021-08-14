@@ -40,92 +40,93 @@
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">Форма обратной связи</h1>
-      <section class="user-form container">
+      <section class="user-form">
         <h2 class="page__title page__title--form">Подбор программы</h2>
         <p class="user-form__description">
           Заполните анкету, и мы подберем <br>
           программу питания для вашего кота
         </p>
         <form class="form" method="post" action="https://echo.htmlacademy.ru" id="your-pet">
-          <div class="container container--form">
-            <fieldset class="form-group form-group--cat">
-              <legend class="form-group__title visually-hidden">
-                Заполните информацию о вашем питомце
-              </legend>
-              <ul class="form-group__list list-reset">
-                <li class="form__field text-field">
-                  <label class="text-field__label" for="cat-name">Имя:*</label>
-                  <div class="text-field__wrapper">
-                    <input
-                      class="text-field__input"
-                      id="cat-name"
-                      type="text"
-                      name="cat-name"
-                      placeholder="Барсик"
-                      required/>
-                  </div>
-                </li>
-                <li class="form__field text-field">
-                  <label class="text-field__label" for="cat-weight">Вес (кг):*</label>
-                  <div class="text-field__wrapper">
-                    <input
-                      class="text-field__input"
-                      id="cat-weight"
-                      type="text"
-                      name="cat-weight"
-                      placeholder="7"
-                      required/>
-                  </div>
-                </li>
-                <li class="form__field text-field">
-                  <label class="text-field__label" for="cat-age">Возраст (лет):</label>
-                  <div class="text-field__wrapper">
-                    <input
-                      class="text-field__input"
-                      id="cat-age"
-                      type="text"
-                      name="cat-age"
-                      placeholder="7"/>
-                  </div>
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset class="form-group form-group--diet">
-              <legend class="form-group__title visually-hidden">
-                Укажите предпочтительную программу питания
-              </legend>
-              <ul class="form-group__list list-reset">
-                <li class="form__field text-field">
+          <fieldset class="form-group form-group--cat">
+            <legend class="form-group__title visually-hidden">
+              Заполните информацию о вашем питомце
+            </legend>
+            <ul class="form-group__list list-reset">
+              <li class="form__field text-field">
+                <label class="text-field__label" for="cat-name">Имя:*</label>
+                <div class="text-field__wrapper" tabindex="0">
                   <input
-                    class="text-field__input text-field__input--radio visually-hidden"
-                    type="radio"
-                    name="program"
-                    value="program-slimming"
-                    id="slimming"
-                    checked/>
-                  <label class="text-field__label text-field__label--radio" for="slimming">Похудение</label>
-                </li>
-                <li class="form__field text-field">
+                  class="text-field__input"
+                  tabindex="-1"
+                  id="cat-name"
+                  type="text"
+                  name="cat-name"
+                  placeholder="Барсик"
+                  required/>
+                </div>
+              </li>
+              <li class="form__field text-field">
+                <label class="text-field__label" for="cat-weight">Вес (кг):*</label>
+                <div class="text-field__wrapper" tabindex="0">
                   <input
-                    class="text-field__input text-field__input--radio visually-hidden"
-                    type="radio"
-                    name="program"
-                    value="program-fatting"
-                    id="fatting"/>
-                  <label class="text-field__label text-field__label--radio" for="fatting">Набор массы</label>
-                </li>
-                <li class="form__field text-field">
+                  class="text-field__input"
+                  tabindex="-1"
+                  id="cat-weight"
+                  type="text"
+                  name="cat-weight"
+                  placeholder="7"
+                  required/>
+                </div>
+              </li>
+              <li class="form__field text-field">
+                <label class="text-field__label" for="cat-age">Возраст (лет):</label>
+                <div class="text-field__wrapper" tabindex="0">
                   <input
-                    class="text-field__input text-field__input--radio visually-hidden"
-                    type="radio"
-                    name="program"
-                    value="need-consultation"
-                    id="consultation"/>
-                  <label class="text-field__label text-field__label--radio" for="consultation">Не знаю (нужен ваш совет)</label>
-                </li>
-              </ul>
-            </fieldset>
-          </div>
+                  class="text-field__input"
+                  tabindex="-1"
+                  id="cat-age"
+                  type="text"
+                  name="cat-age"
+                  placeholder="7"/>
+                </div>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="form-group form-group--diet">
+            <legend class="form-group__title visually-hidden">
+              Укажите предпочтительную программу питания
+            </legend>
+            <ul class="form-group__list list-reset">
+              <li class="form__field text-field">
+                <input
+                  class="text-field__input text-field__input--radio visually-hidden"
+                  type="radio"
+                  name="program"
+                  value="program-slimming"
+                  id="slimming"
+                  checked/>
+                <label class="text-field__label text-field__label--radio" for="slimming">Похудение</label>
+              </li>
+              <li class="form__field text-field">
+                <input
+                  class="text-field__input text-field__input--radio visually-hidden"
+                  type="radio"
+                  name="program"
+                  value="program-fatting"
+                  id="fatting"/>
+                <label class="text-field__label text-field__label--radio" for="fatting">Набор массы</label>
+              </li>
+              <li class="form__field text-field">
+                <input
+                  class="text-field__input text-field__input--radio visually-hidden"
+                  type="radio"
+                  name="program"
+                  value="need-consultation"
+                  id="consultation"/>
+                <label class="text-field__label text-field__label--radio" for="consultation">Не знаю (нужен ваш совет)</label>
+              </li>
+            </ul>
+          </fieldset>
           <fieldset class="form-group form-group--user">
             <legend class="form-group__title">
               Контактные данные (владельца кота)
@@ -133,9 +134,10 @@
             <ul class="form-group__list form-group__list--user list-reset">
               <li class="form__field text-field text-field--user">
                 <label class="text-field__label" for="user-email">E-mail:*</label>
-                <div class="text-field__wrapper">
+                <div class="text-field__wrapper" tabindex="0">
                   <input
                     class="text-field__input"
+                    tabindex="-1"
                     id="user-email"
                     type="email"
                     name="user-email"
@@ -154,9 +156,10 @@
               </li>
               <li class="form__field text-field text-field--user">
                 <label class="text-field__label" for="user-phone">Телефон:*</label>
-                <div class="text-field__wrapper">
+                <div class="text-field__wrapper" tabindex="0">
                   <input
                     class="text-field__input"
+                    tabindex="-1"
                     id="user-phone"
                     type="tel"
                     name="user-phone"
@@ -193,7 +196,7 @@
           <fieldset class="form-group form-group--ingredients">
             <legend class="form-group__title">Дополнительно</legend>
             <ul class="form-group__list form-group__list--ingredients list-reset">
-              <li class="form__field text-field">
+              <li class="form__field text-field text-field--checkbox">
                 <input
                   class="text-field__input text-field__input--checkbox visually-hidden"
                   type="checkbox"
@@ -203,7 +206,7 @@
                   checked/>
                 <label class="text-field__label text-field__label--checkbox" for="sweetener">Сахарозаменитель</label>
               </li>
-              <li class="form__field text-field">
+              <li class="form__field text-field text-field--checkbox">
                 <input
                   class="text-field__input text-field__input--checkbox visually-hidden"
                   type="checkbox"
@@ -212,7 +215,7 @@
                   id="water"/>
                 <label class="text-field__label text-field__label--checkbox" for="water">Питьевая вода</label>
               </li>
-              <li class="form__field text-field">
+              <li class="form__field text-field text-field--checkbox">
                 <input
                   class="text-field__input text-field__input--checkbox visually-hidden"
                   type="checkbox"
@@ -221,7 +224,7 @@
                   id="milk"/>
                 <label class="text-field__label text-field__label--checkbox" for="milk">Молоко</label>
               </li>
-              <li class="form__field text-field">
+              <li class="form__field text-field text-field--checkbox">
                 <input
                 class="text-field__input text-field__input--checkbox visually-hidden"
                   type="checkbox"
@@ -232,7 +235,7 @@
               </li>
             </ul>
           </fieldset>
-          <div class="user-form__wrapper">
+          <div class="form__send">
             <button type="submit" class="user-form__button button button--primary">
               Отправить заявку
             </button>
@@ -268,7 +271,7 @@
       </section>
     </main>
     <footer class="page-footer">
-      <div class="container container--footer">
+      <div class="page-footer__wrapper container">
         <a class="page-footer__logo" href="index.html">
           <img src="img/footer-logo-text.svg" width="128" height="24" alt="Текстовый логотип Кэт-энерджи"/>
         </a>
