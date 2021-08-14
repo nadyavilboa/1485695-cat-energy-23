@@ -57,6 +57,7 @@
 .promo__img {
   @media (min-width: $tablet-width) {
     position: absolute;
+    margin-left: -60px;
     z-index: -5;
     width: 709px;
     height: 609px;
@@ -64,6 +65,7 @@
 
   @media (min-width: $desktop-width) {
     top: 0;
+    margin-left: 0;
     left: 50%;
     width: 552px;
     height: 499px;

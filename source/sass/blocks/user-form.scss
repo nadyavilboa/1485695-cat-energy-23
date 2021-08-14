@@ -1,14 +1,9 @@
 .user-form {
-  padding-top: 37px;
-  padding-bottom: 32px;
-  padding-left: 20px;
+  padding: 37px 20px 32px;
   border-top: 1px solid $border-block;
 
   @media (min-width: $tablet-width) {
-    padding-top: 54px;
-    padding-left: 70px;
-    padding-right: 70px;
-    padding-bottom: 72px;
+    padding: 54px 70px 72px;
     border: 0;
   }
 
