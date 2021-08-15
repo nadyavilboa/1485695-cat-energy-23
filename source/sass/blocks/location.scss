@@ -1,9 +1,32 @@
+.location {
+  display: grid;
+  width: 100%;
+}
+
+.location__wrapper {
+  @media (min-width: $desktop-width) {
+    padding: 95px 0 104px 30px;
+  }
+}
+
 .location__description {
-  padding-top: 28px;
-  padding-bottom: 26px;
+  padding: 28px 20px 26px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: $special-background;
+
+  @media (min-width: $tablet-width) {
+    padding: 66px 72px 58px;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 0;
+    padding: 66px 89px 51px 76px;
+    width: 570px;
+    z-index: 5;
+    background-color: $basic-white;
+  }
 }
 
 .location__description--white {
@@ -31,9 +54,4 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 20px;
   }
-}
-
-.location__map img {
-  display: block;
-  margin: 0 auto;
 }

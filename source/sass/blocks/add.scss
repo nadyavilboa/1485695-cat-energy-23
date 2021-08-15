@@ -1,4 +1,15 @@
+.add {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 .add__title {
+  width: 100%;
   font-family: $site-fonts;
   font-size: 16px;
   line-height: 16px;
@@ -6,14 +17,71 @@
   text-transform: uppercase;
   color: $product-title;
   margin: 0;
+  margin-bottom: 13px;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    margin-right: auto;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 324px;
+    margin-bottom: 0;
+  }
 }
 
-.add__wrapper {
-  display: flex;
-  justify-content: space-between;
-  line-height: 14px;
+.add__count {
+  width: 50%;
+  margin: 0;
+  margin-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    font-size: 16px;
+    line-height: 20px;
+    margin-right: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 0;
+    margin-bottom: 0;
+    text-align: left;
+  }
+}
+
+.add__price {
+  width: 50%;
+  margin: 0;
+  margin-bottom: 15px;
+  text-align: right;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 38px;
+    margin-bottom: 0;
+  }
 }
 
 .add__money {
   text-transform: uppercase;
+}
+
+.add__button {
+  width: 100%;
+
+  @media (min-width: $desktop-width) {
+    width: 244px;
+    grid-column-start: 5;
+    grid-column-end: 6;
+    display: inline-flex;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
 }

@@ -1,5 +1,16 @@
 .user-form {
-  padding: 37px 0 32px;
+  padding: 37px 20px 32px;
+  border-top: 1px solid $border-block;
+
+  @media (min-width: $tablet-width) {
+    padding: 54px 70px 72px;
+    border: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 56px;
+    padding-bottom: 82px;
+  }
 }
 
 .user-form__description {
@@ -8,15 +19,43 @@
   color: $basic-black;
   margin: 0;
   margin-bottom: 39px;
-  padding-left: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 66px;
+  }
 }
 
-.user-form__button {
-  margin-left: 20px;
+.user-form__wrapper {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 61px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column-gap: 81px;
+  }
 }
 
 .user-form__note {
   line-height: 16px;
   color: $basic-black;
-  margin-left: 20px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    text-align: left;
+  }
+}
+
+.user-form__button {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: 282px;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

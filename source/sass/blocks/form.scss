@@ -1,0 +1,22 @@
+.form {
+  padding: 0;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 80px;
+  }
+}
+
+.form__send {
+  @media (min-width: $tablet-width) {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 61px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column-gap: 80px;
+  }
+}

@@ -1,5 +1,11 @@
 .additional-products {
-  padding: 0 20px;
+  padding-top: 25px;
+  border-top: 1px solid $border-block;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 30px;
+    border-top: none;
+  }
 }
 
 .additional-products__title {
@@ -10,6 +16,20 @@
   color: $basic-black;
   margin: 0;
   margin-bottom: 36px;
-  padding-top: 25px;
-  border-top: 1px solid $border-block;
+
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    border-top: none;
+    margin-bottom: 80px;
+  }
+}
+
+.additional-products__wrapper {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 80px;
+  }
 }

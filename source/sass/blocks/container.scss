@@ -5,25 +5,10 @@
 
   @media (min-width: $tablet-width) {
     padding: 0 30px;
-    max-width: none;
-  }
-}
-
-.container--promo {
-  @media (min-width: $tablet-width) {
-    padding-left: 90px;
+    max-width: 768px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 160px;
-  }
-}
-
-.container--footer {
-  display: grid;
-
-  @media (min-width: $tablet-width) {
-    display: flex;
-    justify-content: space-between;
+    max-width: 1280px;
   }
 }

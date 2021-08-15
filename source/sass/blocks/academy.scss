@@ -3,9 +3,25 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 22px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+  }
 }
 
 .academy__title {
   font-size: 16px;
   color: $basic-black;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 22px;
+  }
+}
+
+.academy__link:hover .academy__logo {
+  fill: $basic-green;
+}
+
+.academy__link:focus {
+  opacity: 0.3;
 }
