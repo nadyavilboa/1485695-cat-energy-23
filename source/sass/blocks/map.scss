@@ -1,6 +1,11 @@
 .map {
-  position: relative;
   padding: 0;
+  width: 100%;
+  height: 362px;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
 
   @media (min-width: $desktop-width) {
     order: -1;
@@ -11,39 +16,59 @@
   margin: 0 auto;
   padding: 0;
   width: 100%;
-  object-fit: cover;
-  z-index: -5;
+  height: 100%;
   position: absolute;
+  top: 0;
+  z-index: -5;
+
+  @media (min-width: $desktop-width) {
+    z-index: -15;
+  }
+}
+
+.map__img img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.map__img::after {
+  position: absolute;
+  left: calc(50% - 30px);
+  top: calc(50% - 35px);
+  z-index: 0;
+  content: "";
+  width: 57px;
+  height: 53px;
+  background-repeat: no-repeat;
+  background-image: url("../img/map-pin.png");
+  background-position: 0 0;
+
+  @media (min-width: $tablet-width) {
+    left: calc(50% - 56px);
+    top: calc(50% - 53px);
+    width: 113px;
+    height: 106px;
+    background-image: url("../img/map-pin-big.png");
+  }
 
   @media (min-width: $desktop-width) {
     z-index: -10;
   }
 }
 
-.map__img img {
-  display: block;
-  margin: 0 auto;
-}
-
-.map__google {
-  margin: 0 auto;
+.map__leaflet {
+  position: absolute;
+  top: 0;
   width: 100%;
-  padding: 0;
-
-  @media (min-width: $desktop-width) {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -5;
-  }
-}
-
-.map__google iframe {
-  height: 362px;
-  width: 100%;
-  border: none;
+  height: 100%;
+  z-index: 5;
 
   @media (min-width: $tablet-width) {
     min-height: 400px;
+  }
+
+  @media (min-width: $desktop-width) {
+    z-index: 0;
   }
 }

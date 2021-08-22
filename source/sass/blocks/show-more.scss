@@ -4,10 +4,23 @@
   align-items: center;
 
   @media (min-width: $tablet-width) {
-    padding: 52px 37px 38px;
     background-color: $basic-white;
     background-image: none;
+    padding: 0;
+  }
+}
+
+.show-more__wrapper {
+  @media (min-width: $tablet-width) {
+    margin-top: 83px;
+    padding: 52px 38px 38px;
+    height: 84%;
     border: 2px solid $special-background;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 92px;
+    padding-bottom: 41px;
   }
 }
 
@@ -17,7 +30,7 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
-  color: $special-text;
+  color: $text-note;
   margin: 0;
   margin-bottom: 8px;
   text-align: center;

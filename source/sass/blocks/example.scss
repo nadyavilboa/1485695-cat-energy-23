@@ -1,19 +1,31 @@
 .example {
-  padding: 27px 20px 25px;
   background-color: $example-background;
 
   @media (min-width: $tablet-width) {
-    padding: 43px 30px 67px;
     background-image: linear-gradient($basic-white 46%, $example-background 46%, $example-background 100%);
   }
 
   @media (min-width: $desktop-width) {
-    padding: 11px 30px 67px;
+    background-image: linear-gradient($basic-white 30%, $example-background 30%, $example-background 100%);
+  }
+}
+
+.example__wrapper {
+  padding-top: 27px;
+  padding-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 43px;
+    padding-bottom: 67px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 11px;
+    padding-bottom: 67px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-column-gap: 135px;
-    background-image: linear-gradient($basic-white 30%, $example-background 30%, $example-background 100%);
   }
 }
 
@@ -53,7 +65,7 @@
   }
 }
 
-.example__wrapper {
+.example__data {
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
