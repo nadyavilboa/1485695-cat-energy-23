@@ -28,4 +28,3 @@ map.on('mouseout', function() {
 setMapView();
 
 window.addEventListener('resize', resizeWindow);
-
