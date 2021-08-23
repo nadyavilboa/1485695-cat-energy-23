@@ -1,6 +1,7 @@
 .text-field {
   margin-bottom: 14px;
-  overflow: hidden;
+  position: relative;
+  //overflow: hidden;
   display: flex;
   align-items: center;
 
@@ -43,19 +44,6 @@
   }
 }
 
-.text-field__wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid $border-input;
-  margin-left: 13px;
-  padding-right: 15px;
-
-  &:hover {
-    border: 1px solid $special-border;
-  }
-}
-
 .text-field__label,
 .text-field__input {
   font-family: $site-fonts;
@@ -66,9 +54,27 @@
   align-items: center;
 }
 
+.text-field__label {
+  white-space: nowrap;
+}
+
 .text-field__input {
-  border: none;
   padding: 13px 15px 15px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid $border-input;
+  margin-left: 13px;
+  padding-right: 15px;
+
+  &:hover {
+    border: 1px solid $special-border;
+  }
+
+  &:focus {
+    border: 2px solid $text-special;
+  }
 }
 
 .text-field__input::placeholder {
@@ -81,6 +87,8 @@
 .text-field__icon {
   display: inline-flex;
   width: 20px;
+  position: absolute;
+  right: 19px;
 }
 
 .text-field__label--radio,
@@ -101,6 +109,22 @@
   margin-right: 15px;
 }
 
+.text-field__input--radio:hover ~ .text-field__label--radio::before {
+  border: 1px solid $checkbox-hover;
+}
+
+.text-field__input--radio:focus ~ .text-field__label--radio::before {
+  border: 2px solid $basic-green;
+}
+
+.text-field__input--radio:disabled ~ .text-field__label--radio {
+  opacity: 0.3;
+}
+
+.text-field__input--radio:disabled ~ .text-field__label--radio::before {
+  opacity: 0.3;
+}
+
 .text-field__label--checkbox::before {
   content: "";
   display: inline-block;
@@ -109,6 +133,22 @@
   height: 30px;
   border: 1px solid $special-border;
   margin-right: 15px;
+}
+
+.text-field__input--checkbox:hover ~ .text-field__label--checkbox::before {
+  border: 1px solid $checkbox-hover;
+}
+
+.text-field__input--checkbox:focus ~ .text-field__label--checkbox::before {
+  border: 2px solid $basic-green;
+}
+
+.text-field__input--checkbox:disabled ~ .text-field__label--checkbox {
+  opacity: 0.3;
+}
+
+.text-field__input--radio:disabled ~ .text-field__label--checkbox::before {
+  opacity: 0.3;
 }
 
 .text-field__input--radio:checked ~ .text-field__label--radio::after {
@@ -144,4 +184,3 @@
   margin: 0;
   border: 1px solid $border-input;
 }
-

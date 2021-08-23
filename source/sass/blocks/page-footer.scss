@@ -23,6 +23,7 @@
 
 .page-footer__logo {
   display: flex;
+  justify-content: center;
   align-items: center;
   padding: 19px 0 32px;
   border-bottom: 1px solid $border-bottom;
@@ -36,6 +37,7 @@
   }
 
   @media (min-width: $tablet-width) {
+    justify-content: flex-start;
     border-bottom: none;
     padding: 0;
   }
