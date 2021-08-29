@@ -6,15 +6,32 @@
   background-size: cover;
   margin-bottom: 35px;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/gift-photo-mobile-@2x.png");
+    background-size: 280px auto;
+  }
+
   @media (min-width: $tablet-width) {
     margin-bottom: 76px;
     padding: 57px 124px 69px 78px;
-    background-position: 0 65%;
+    background-position: -30px 65%;
+    background-image: url("../img/gift-photo-tablet.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift-photo-tablet-@2x.png");
+      background-size: 708px auto;
+    }
   }
 
   @media (min-width: $desktop-width) {
+    margin-bottom: 69px;
     padding: 30px;
     min-width: 245px;
+    background-image: url("../img/gift-photo-desktop.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift-photo-desktop-@2x.png");
+    }
   }
 }
 

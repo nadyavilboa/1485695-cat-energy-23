@@ -21,12 +21,42 @@
 .form-group--diet {
   padding-top: 22px;
   padding-bottom: 20px;
-  border-top: 1px solid $border-block;
-  border-bottom: 1px solid $border-block;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: calc(100% + 40px);
+    top: 0;
+    left: -20px;
+    right: -20px;
+    height: 1px;
+    background-color: $border-block;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 40px);
+    bottom: 0;
+    left: -20px;
+    right: -20px;
+    height: 1px;
+    background-color: $border-block;
+  }
 
   @media (min-width: $tablet-width) {
     padding: 25px 28px;
+    margin-bottom: 69px;
     border: 1px solid $border-block;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 }
 

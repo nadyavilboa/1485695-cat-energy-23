@@ -28,6 +28,30 @@
   }
 }
 
+.page-header__logo--img img {
+  @media (min-width: $tablet-width) {
+    width: 60px;
+    height: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 70px;
+    height: 59px;
+  }
+}
+
+.page-header__logo--name img {
+  @media (min-width: $tablet-width) {
+    width: 101px;
+    height: 19px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 118px;
+    height: 21px;
+  }
+}
+
 .page-header__logo:hover {
   opacity: 0.8;
 }

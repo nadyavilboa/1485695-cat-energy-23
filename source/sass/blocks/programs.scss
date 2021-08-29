@@ -80,13 +80,13 @@
   @media (min-width: $tablet-width) {
     width: 200px;
     height: 211px;
-    background-image: url("../img/cat_sit-big.svg");
+    background-image: url("../img/cat_sit-tablet.svg");
   }
 
   @media (min-width: $desktop-width) {
     width: 100px;
     height: 106px;
-    background-image: url("../img/cat_sit-middle.svg");
+    background-image: url("../img/cat_sit-desktop.svg");
   }
 }
 
@@ -98,13 +98,13 @@
   @media (min-width: $tablet-width) {
     width: 268px;
     height: 200px;
-    background-image: url("../img/cat_go-big.svg");
+    background-image: url("../img/cat_go-tablet.svg");
   }
 
   @media (min-width: $desktop-width) {
     width: 134px;
     height: 100px;
-    background-image: url("../img/cat_go-middle.svg");
+    background-image: url("../img/cat_go-desktop.svg");
   }
 }
 

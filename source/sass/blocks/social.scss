@@ -14,14 +14,16 @@
 .social__link:hover .social__icon,
 .social__link:focus .social__icon {
   fill: $basic-green;
+  opacity: 1;
 }
 
 .social__link:hover .social__icon--fb,
 .social__link:focus .social__icon--fb {
   fill: none;
   stroke: $basic-green;
+  opacity: 1;
 }
 
-.social__link:focus {
+.social__link:active {
   opacity: 0.3;
 }

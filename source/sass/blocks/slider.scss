@@ -1,6 +1,14 @@
+.slider {
+  @media (min-width: $desktop-width) {
+    grid-row: 1/4;
+    grid-column: 2/3;
+  }
+}
+
 .slider__photos {
   display: flex;
   justify-content: center;
+  margin-bottom: 23px;
 }
 
 .slider__img {
@@ -9,10 +17,37 @@
 }
 
 .slider__img--early {
-  width: 311px;
+  width: 280px;
   height: 232px;
   display: inline;
+  vertical-align: auto;
   background-image: url("../img/before-mobile.png");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/before-mobile-@2x.png");
+    background-size: 280px 232px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 354px;
+    height: 540px;
+    background-image: url("../img/before-tablet.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/before-tablet-@2x.png");
+      background-size: 354px 540px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 405px;
+    background-image: url("../img/before-desktop.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/before-desktop-@2x.png");
+      background-size: 405px 540px;
+    }
+  }
 }
 
 .slider__img--today {
@@ -20,9 +55,29 @@
 
   @media (min-width: $tablet-width) {
     display: inline;
-    width: 251px;
-    height: 240px;
-    background-image: url("../img/after-mobile.png");
+    vertical-align: auto;
+    width: 354px;
+    height: 540px;
+    background-image: url("../img/after-tablet.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/after-tablet-@2x.png");
+      background-size: 354px 540px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    top: 0;
+    left: -40px;
+    width: 325px;
+    height: 654px;
+    background-image: url("../img/after-desktop.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/after-desktop-@2x.png");
+      background-size: 325px 654px;
+    }
   }
 }
 
@@ -114,8 +169,9 @@
       border-bottom: 1px solid rgba($basic-black, 0.4);
     }
 
-    &:focus {
-      border: none;
+    &:focus,
+    &:active {
+      border-bottom: 1px solid $example-background;
     }
   }
 }

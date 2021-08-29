@@ -5,6 +5,7 @@
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
   }
 }
 
@@ -76,12 +77,16 @@
 .add__button {
   width: 100%;
 
+  @media (min-width: $tablet-width) {
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+
   @media (min-width: $desktop-width) {
     width: 244px;
     grid-column-start: 5;
     grid-column-end: 6;
     display: inline-flex;
-    padding-top: 7px;
-    padding-bottom: 7px;
+    vertical-align: auto;
   }
 }

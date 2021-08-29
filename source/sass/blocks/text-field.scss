@@ -1,7 +1,6 @@
 .text-field {
   margin-bottom: 14px;
   position: relative;
-  //overflow: hidden;
   display: flex;
   align-items: center;
 
@@ -10,8 +9,6 @@
   }
 
   @media (min-width: $tablet-width) {
-    font-size: 20px;
-    line-height: 30px;
     margin-bottom: 20px;
 
     &:last-child {
@@ -48,10 +45,16 @@
 .text-field__input {
   font-family: $site-fonts;
   font-size: 16px;
+  line-height: 18px;
   color: $text-special;
   text-transform: uppercase;
   display: flex;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .text-field__label {
@@ -64,6 +67,7 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  outline: none;
   border: 1px solid $border-input;
   margin-left: 13px;
   padding-right: 15px;
@@ -73,19 +77,27 @@
   }
 
   &:focus {
-    border: 2px solid $text-special;
+    border: 1px solid $text-special;
+    outline: 1px solid $text-special;
   }
 }
 
 .text-field__input::placeholder {
   font-family: $site-fonts;
   font-size: 16px;
+  line-height: 18px;
   color: $text-special;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .text-field__icon {
   display: inline-flex;
+  vertical-align: auto;
   width: 20px;
   position: absolute;
   right: 19px;

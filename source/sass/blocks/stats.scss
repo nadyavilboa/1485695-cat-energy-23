@@ -3,9 +3,16 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 31px;
+  margin: 0;
+  margin-bottom: 25px;
 
   @media (min-width: $tablet-width) {
     max-width: none;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 55px;
   }
 }
 
@@ -14,43 +21,8 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-
-  &::before {
-    content: "";
-    order: -2;
-    position: absolute;
-    left: 0;
-    width: 124px;
-    height: 56px;
-    background-repeat: no-repeat;
-    background-image: url("../img/weight_back.svg");
-    background-position: 0 0;
-  }
-
-  @media (min-width: $tablet-width) {
-    margin-right: 42px;
-
-    &:last-child {
-      margin-right: 0;
-    }
-
-    &::before {
-      width: 162px;
-      height: 77px;
-      margin-right: 0;
-      background-image: url("../img/weight_back_big.svg");
-    }
-  }
-}
-
-.stats__wrapper--time::before {
-  grid-column: 2/3;
-  left: auto;
-  right: 0;
-
-  @media (min-width: $tablet-width) {
-    background-image: url("../img/weight_back_time.svg");
-  }
+  border: 1px solid $special-border;
+  border-radius: 3px;
 }
 
 .stats__data {
@@ -72,13 +44,23 @@
 }
 
 .stats__description {
+  position: relative;
+  top: 11px;
   font-size: 12px;
   line-height: 12px;
   text-align: center;
-  padding: 0 30px;
+  margin: 0 20px;
+  background-color: $example-background;
 
   @media (min-width: $tablet-width) {
     font-size: 14px;
     line-height: 14px;
+    padding: 0 10px;
+    top: 6px;
+    background-color: $basic-white;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $example-background;
   }
 }
