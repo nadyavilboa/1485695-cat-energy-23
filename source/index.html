@@ -19,7 +19,11 @@
     <header class="page-header container">
       <div class="page-header__wrapper">
         <a class="page-header__logo page-header__logo--img">
-          <img class="img-logo" src="img/icon-logo.svg" width="33" height="38" alt="Логотип Кэт-энерджи"/>
+          <picture>
+            <source media="(min-width: 1280px" srcset="img/icon_logo-desktop.svg">
+            <source media="(min-width: 768px" srcset="img/icon_logo-tablet.svg">
+            <img class="img-logo" src="img/icon-logo.svg" width="33" height="38" alt="Логотип Кэт-энерджи"/>
+          </picture>
         </a>
         <a class="page-header__logo page-header__logo--name">
           <img class="name-logo" src="img/header-logo-text.svg" width="100" height="18" alt="Текстовый логотип Кэт-энерджи"/>
@@ -44,14 +48,20 @@
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">Кэт-энерджи: магазин функционального питания для котов</h1>
-      <section class="promo container container--promo">
-        <h2 class="promo__title">
-          Функциональное<br>
-          питание для котов
-        </h2>
-        <p class="promo__slogan">Занялся собой? Займись котом!</p>
-        <img class="promo__img" src="img/promo-product.png" width="280" height="270" alt="На картинке упаковка корма серии pro с курицей"/>
-        <a class="promo__link button button--primary" href="form.html">Подобрать программу</a>
+      <section class="promo">
+        <div class="container">
+          <h2 class="promo__title">
+            Функциональное<br>
+            питание для котов
+          </h2>
+          <p class="promo__slogan">Занялся собой? Займись котом!</p>
+          <picture>
+            <source media="(min-width: 1280px" srcset="img/promo-product-desktop.png, img/promo-product-desktop-@2x.png 2x">
+            <source media="(min-width: 768px" srcset="img/promo-product-tablet.png, img/promo-product-tablet-@2x.png 2x">
+            <img class="promo__img" src="img/promo-product.png" srcset="img/promo-product-@2x.png 2x" width="280" height="270" alt="На картинке упаковка корма серии pro с курицей"/>
+          </picture>
+          <a class="promo__link button button--primary" href="form.html">Подобрать программу</a>
+        </div>
       </section>
       <section class="programs container">
         <h2 class="visually-hidden">Список готовых программ питания</h2>
@@ -138,24 +148,30 @@
         </div>
         </div>
       </section>
-      <section class="location">
-        <div class="location__description location__description--white">
-          <h2 class="visually-hidden">Расположение офиса компании</h2>
-          <p class="location__text location__text--ad">
-            Приглашаем<br/>
-            к сотрудничеству<br/>
-            дилеров!</p>
-          <div class="location__text location__text--wrapper">
-            <p class="location__text location__text--address">
-              ул. Большая<br/>
-              Конюшенная, д. 19/8
-            </p>
-            <p class="location__text location__text--city">Санкт-Петербург</p>
+      <section class="location location--white">
+        <div class="container">
+          <div class="location__description">
+            <h2 class="visually-hidden">Расположение офиса компании</h2>
+            <p class="location__text location__text--ad">
+              Приглашаем<br/>
+              к сотрудничеству<br/>
+              дилеров!</p>
+            <div class="location__text location__text--wrapper">
+              <p class="location__text location__text--address">
+                ул. Большая<br/>
+                Конюшенная, д. 19/8
+              </p>
+              <p class="location__text location__text--city">Санкт-Петербург</p>
+            </div>
           </div>
         </div>
         <div class="location__map map">
           <div class="map__img">
-            <img src="img/map-img.png" width="320" height="362" alt="Адрес компании на карте"/>
+            <picture>
+              <source media="(min-width: 1280px" srcset="img/map-img-desktop.png, img/map-img-desktop-@2x.png 2x">
+              <source media="(min-width: 768px" srcset="img/map-img-tablet.png, img/map-img-tablet-@2x.png 2x">
+              <img src="img/map-img-mobile.png" srcset="img/map-img-mobile-@2x.png 2x" width="320" height="362" alt="Адрес компании на карте"/>
+            </picture>
           </div>
           <div class="map__leaflet" id="map"></div>
         </div>

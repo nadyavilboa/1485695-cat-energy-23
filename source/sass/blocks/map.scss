@@ -44,12 +44,22 @@
   background-image: url("../img/map-pin.png");
   background-position: 0 0;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/map-pin-@2x.png");
+    background-size: 57px auto;
+  }
+
   @media (min-width: $tablet-width) {
     left: calc(50% - 56px);
     top: calc(50% - 53px);
     width: 113px;
     height: 106px;
-    background-image: url("../img/map-pin-big.png");
+    background-image: url("../img/map-pin-tablet.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-pin-tablet-@2x.png");
+      background-size: 113px auto;
+    }
   }
 
   @media (min-width: $desktop-width) {

@@ -1,6 +1,10 @@
 .catalog {
+  border-top: 1px solid $border-bottom;
+  padding-top: 27px;
+
   @media (min-width: $tablet-width) {
     padding-bottom: 68px;
+    border-top: none;
   }
 
   @media (min-width: $desktop-width) {

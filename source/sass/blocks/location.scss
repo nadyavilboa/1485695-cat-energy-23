@@ -1,19 +1,23 @@
 .location {
-  display: grid;
-  width: 100%;
+  background-color: $special-background;
 
   @media (min-width: $desktop-width) {
+    position: relative;
     height: 400px;
+    padding: 95px 0 104px;
   }
 }
 
+.location--white {
+  background-color: $basic-white;
+}
+
 .location__description {
+  position: relative;
   padding: 28px 20px 26px;
-  height: max-content;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: $special-background;
 
   @media (min-width: $tablet-width) {
     padding: 66px 72px 58px;
@@ -21,16 +25,11 @@
 
   @media (min-width: $desktop-width) {
     order: 0;
-    margin-top: 95px;
     padding: 66px 89px 51px 76px;
     width: 570px;
     z-index: 5;
     background-color: $basic-white;
   }
-}
-
-.location__description--white {
-  background-color: $basic-white;
 }
 
 .location__text {
@@ -58,8 +57,17 @@
 
 .location__map {
   position: relative;
+  height: 362px;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
 
   @media (min-width: $desktop-width) {
     position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
   }
 }

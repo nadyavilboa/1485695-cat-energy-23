@@ -13,6 +13,7 @@
   margin-bottom: 38px;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 72px;
     font-size: 60px;
     line-height: 60px;
   }
@@ -76,7 +77,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    background-image: url("../img/one.png");
+    background-image: url("../img/one.svg");
   }
 }
 
@@ -86,7 +87,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    background-image: url("../img/two.png");
+    background-image: url("../img/two.svg");
   }
 }
 
@@ -96,7 +97,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    background-image: url("../img/three.png");
+    background-image: url("../img/three.svg");
   }
 }
 
@@ -106,6 +107,6 @@
   }
 
   @media (min-width: $tablet-width) {
-    background-image: url("../img/four.png");
+    background-image: url("../img/four.svg");
   }
 }

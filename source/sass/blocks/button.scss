@@ -1,5 +1,6 @@
 .button {
   display: inline-flex;
+  vertical-align: auto;
   justify-content: center;
   align-items: center;
   padding: 7px 20px;
@@ -10,7 +11,9 @@
   background-color: rgba($basic-white, 0);
 
   @media (min-width: $tablet-width) {
-    padding: 14px 20px;
+    line-height: 20px;
+    font-size: 16px;
+    padding: 10px 20px;
   }
 }
 
