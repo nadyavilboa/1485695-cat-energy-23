@@ -1,13 +1,21 @@
+import gulpSass from "gulp-sass";
+import nodeSass from "node-sass";
+const sass = gulpSass(nodeSass); //источник https://stackoverflow.com/questions/68176320/gulp-sass-5-0-how-to-use-compiler-with-import-instead-of-require
+
 const gulp = require("gulp");
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
-const sass = require("gulp-sass");
+//const sass = require("gulp-sass"); //по материалам лекции
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
 const htmlmin = require("gulp-htmlmin");
 const csso = require("postcss-csso");
 const rename = require("gulp-rename");
+const terser = require("gulp-terser");
+const squoosh = require("gulp-libsquoosh");
+const webp = require("gulp-webp");
+const del = require("del");
 
 // Styles
 
@@ -29,13 +37,86 @@ const styles = () => {
 exports.styles = styles;
 
 // HTML
+
 const html = () => {
   return gulp.src('source/*.html')
-  .pipe(htmlmin ({ collapseWhitespace: true }))
-  .pipe(gulp.dest('build'));
+    .pipe(htmlmin ({ collapseWhitespace: true }))
+    .pipe(gulp.dest('build'));
 }
 
 exports.html = html;
+
+// Scripts
+
+const scripts = () => {
+  return gulp.src(["source/js/*.js", "!source/js/main.js"])
+    .pipe(terser())
+    .pipe(gulp.dest('build/js'))
+}
+
+exports.scripts = scripts;
+
+// script main.js - отдельно, потому что только его нужно переименовать
+
+const scriptMain = () => {
+  return gulp.src('source/js/main.js')
+    .pipe(terser())
+    .pipe(rename("main.min.js"))
+    .pipe(gulp.dest('build/js'))
+}
+
+exports.scriptMain = scriptMain;
+
+// Images
+
+const optimazeImages = () => {
+  return gulp.src('source/img/**/*.{jpg,png,svg}')
+    .pipe(squoosh())
+    .pipe(gulp.dest('build/img'));
+}
+
+exports.optimazeImages = optimazeImages;
+
+const copyImages = () => {
+  return gulp.src('source/img/**/*.{jpg,png,svg}')
+    .pipe(gulp.dest('build/img'));
+}
+
+exports.copyImages = copyImages;
+
+// Webp
+
+const createWebp = () => {
+  return gulp.src('source/img/**/*.{jpg,png}')
+    .pipe(webp({quality: 90}))
+    .pipe(gulp.dest('build/img'))
+}
+
+exports.createWebp = createWebp;
+
+// Copy
+
+const copy = (done) => {
+  gulp.src([
+    'source/fonts/*.{woff2,woff}',
+    'source/*.ico',
+    'manifest.webmanifest',
+  ], {
+    base: 'source'
+  })
+    .pipe(gulp.dest('build'))
+  done();
+}
+
+exports.copy = copy;
+
+// Clean
+
+const clean = () => {
+  return del('build');
+}
+
+exports.clean = clean;
 
 // Server
 
@@ -60,6 +141,35 @@ const watcher = () => {
   gulp.watch("source/*.html").on("change", sync.reload);
 }
 
+//Build
+
+const build = gulp.series (
+  clean,
+  copy,
+  optimazeImages,
+  gulp.parallel(
+    styles,
+    html,
+    scripts,
+    scriptMain,
+    createWebp
+  ),
+)
+
+exports.build = build;
+
 exports.default = gulp.series(
-  styles, html, server, watcher
-);
+  clean,
+  copy,
+  copyImages,
+  gulp.parallel(
+    styles,
+    html,
+    scripts,
+    scriptMain,
+    createWebp
+  ),
+    gulp.series(
+      server,
+      watcher
+  ));
