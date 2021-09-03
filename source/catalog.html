@@ -16,23 +16,23 @@
     <link rel="manifest" href="manifest.webmanifest"/>
   </head>
   <body class="page__body">
-    <header class="page-header  container">
+    <header class="page-header container">
       <div class="page-header__wrapper">
         <a class="page-header__logo page-header__logo--img" href="index.html">
           <picture>
-            <source media="(min-width: 1280px" srcset="img/icon_logo-desktop.svg">
-            <source media="(min-width: 768px" srcset="img/icon_logo-tablet.svg">
+            <source media="(min-width: 1280px)" srcset="img/icon_logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/icon_logo-tablet.svg">
             <img class="img-logo" src="img/icon-logo.svg" width="33" height="38" alt="Логотип Кэт-энерджи"/>
           </picture>
         </a>
         <a class="page-header__logo page-header__logo--name" href="index.html">
           <img class="name-logo" src="img/header-logo-text.svg" width="100" height="18" alt="Текстовый логотип Кэт-энерджи"/>
         </a>
-        <button class="page-header__toggle page--header__toggle--open" type="button">
+        <button class="page-header__toggle page--header__toggle--open display-none" type="button">
           <span class="visually-hidden">Открыть/закрыть меню</span>
         </button>
       </div>
-      <nav class="main-nav display-none">
+      <nav class="main-nav">
         <ul class="main-nav__list menu list-reset">
           <li class="menu__item">
             <a class="menu__link" href="index.html">Главная</a>
@@ -46,7 +46,7 @@
         </ul>
       </nav>
     </header>
-    <main class="page-main">
+    <main class="page-main page-main--catalog">
       <h1 class="visually-hidden">Товары и акции</h1>
       <section class="catalog container">
         <h2 class="page__title page__title--catalog">Каталог продукции</h2>
@@ -59,8 +59,11 @@
             </h3>
             <a class="product__link" href="#">
               <picture>
-                <source media="(min-width: 1280px" srcset="img/chicken-pro-500_desktop.png, img/chicken-pro-500_desktop-@2x.png 2x">
-                <source media="(min-width: 768px" srcset="img/chicken-pro-500_tablet.png, img/chicken-pro-500_tablet-@2x.png 2x">
+                <source type="image/webp" media="(min-width: 1280px)" srcset="img/chicken-pro-500_desktop.webp 1x, img/chicken-pro-500_desktop-@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/chicken-pro-500_tablet.webp 1x, img/chicken-pro-500_tablet-@2x.webp 2x">
+                <source type="image/webp" srcset="img/chicken-pro-500.webp 1x, img/chicken-pro-500-@2x.webp 2x">
+                <source media="(min-width: 1280px)" srcset="img/chicken-pro-500_desktop.png, img/chicken-pro-500_desktop-@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/chicken-pro-500_tablet.png, img/chicken-pro-500_tablet-@2x.png 2x">
                 <img src="img/chicken-pro-500.png" srcset="img/chicken-pro-500-@2x.png 2x" width="68" height="86" alt="Небольшой пакет корма с курицей"/>
               </picture>
             </a>
@@ -90,8 +93,11 @@
             </h3>
             <a class="product__link product__link--big" href="#">
               <picture>
-                <source media="(min-width: 1280px" srcset="img/chicken-pro-1000_desktop.png, img/chicken-pro-1000_desktop-@2x.png 2x">
-                <source media="(min-width: 768px" srcset="img/chicken-pro-1000_tablet.png, img/chicken-pro-1000_tablet-@2x.png 2x">
+                <source type="image/webp" media="(min-width: 1280px)" srcset="img/chicken-pro-1000_desktop.webp 1x, img/chicken-pro-1000_desktop-@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/chicken-pro-1000_tablet.webp 1x, img/chicken-pro-1000_tablet-@2x.webp 2x">
+                <source type="image/webp" srcset="img/chicken-pro-1000.webp 1x, img/chicken-pro-1000-@2x.webp 2x">
+                <source media="(min-width: 1280px)" srcset="img/chicken-pro-1000_desktop.png, img/chicken-pro-1000_desktop-@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/chicken-pro-1000_tablet.png, img/chicken-pro-1000_tablet-@2x.png 2x">
                 <img src="img/chicken-pro-1000.png" srcset="img/chicken-pro-1000-@2x.png 2x" width="84" height="101" alt="Средний пакет корма с курицей"/>
               </picture>
             </a>
@@ -121,8 +127,11 @@
             </h3>
             <a class="product__link" href="#">
               <picture>
-                <source media="(min-width: 1280px" srcset="img/fish-pro-500_desktop.png, img/fish-pro-500_desktop-@2x.png 2x">
-                <source media="(min-width: 768px" srcset="img/fish-pro-500_tablet.png, img/fish-pro-500_tablet-@2x.png 2x">
+                <source type="image/webp" media="(min-width: 1280px)" srcset="img/fish-pro-500_desktop.webp 1x, img/fish-pro-500_desktop-@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/fish-pro-500_tablet.webp 1x, img/fish-pro-500_tablet-@2x.webp 2x">
+                <source type="image/webp" srcset="img/fish-pro-500.webp 1x, img/fish-pro-500-@2x.webp 2x">
+                <source media="(min-width: 1280px)" srcset="img/fish-pro-500_desktop.png, img/fish-pro-500_desktop-@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/fish-pro-500_tablet.png, img/fish-pro-500_tablet-@2x.png 2x">
                 <img class="product__img" src="img/fish-pro-500.png" srcset="img/fish-pro-500-@2x.png 2x" width="68" height="78" alt="Небольшой пакет корма с рыбой"/>
               </picture>
             </a>
@@ -152,8 +161,11 @@
             </h3>
             <a class="product__link product__link--big" href="#">
               <picture>
-                <source media="(min-width: 1280px" srcset="img/fish-pro-1000_desktop.png, img/fish-pro-1000_desktop-@2x.png 2x">
-                <source media="(min-width: 768px" srcset="img/fish-pro-1000_tablet.png, img/fish-pro-1000_tablet-@2x.png 2x">
+                <source type="image/webp" media="(min-width: 1280px)" srcset="img/fish-pro-1000_desktop.webp 1x, img/fish-pro-1000_desktop-@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/fish-pro-1000_tablet.webp 1x, img/fish-pro-1000_tablet-@2x.webp 2x">
+                <source type="image/webp" srcset="img/fish-pro-1000.webp 1x, img/fish-pro-1000-@2x.webp 2x">
+                <source media="(min-width: 1280px)" srcset="img/fish-pro-1000_desktop.png, img/fish-pro-1000_desktop-@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/fish-pro-1000_tablet.png, img/fish-pro-1000_tablet-@2x.png 2x">
                 <img src="img/fish-pro-1000.png" srcset="img/fish-pro-1000-@2x.png 2x" width="84" height="101" alt="Средний пакет корма с рыбой"/>
               </picture>
             </a>
@@ -182,8 +194,11 @@
             </h3>
             <a class="product__link" href="#">
               <picture>
-                <source media="(min-width: 1280px" srcset="img/buckwheat-slim-500_desktop.png, img/buckwheat-slim-500_desktop-@2x.png 2x">
-                <source media="(min-width: 768px" srcset="img/buckwheat-slim-500_tablet.png, img/buckwheat-slim-500_tablet-@2x.png 2x">
+                <source type="image/webp" media="(min-width: 1280px)" srcset="img/buckwheat-slim-500_desktop.webp 1x, img/buckwheat-slim-500_desktop-@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/buckwheat-slim-500_tablet.webp 1x, img/buckwheat-slim-500_tablet-@2x.webp 2x">
+                <source type="image/webp" srcset="img/buckwheat-slim-500.webp 1x, img/buckwheat-slim-500-@2x.webp 2x">
+                <source media="(min-width: 1280px)" srcset="img/buckwheat-slim-500_desktop.png, img/buckwheat-slim-500_desktop-@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/buckwheat-slim-500_tablet.png, img/buckwheat-slim-500_tablet-@2x.png 2x">
                 <img src="img/buckwheat-slim-500.png" srcset="img/buckwheat-slim-500-@2x.png 2x" width="68" height="78" alt="Небольшой пакет корма с гречкой"/>
               </picture>
             </a>
@@ -213,8 +228,11 @@
             </h3>
             <a class="product__link product__link--big" href="#">
               <picture>
-                <source media="(min-width: 1280px" srcset="img/buckwheat-slim-1000_desktop.png, img/buckwheat-slim-1000_desktop-@2x.png 2x">
-                <source media="(min-width: 768px" srcset="img/buckwheat-slim-1000_tablet.png, img/buckwheat-slim-1000_tablet-@2x.png 2x">
+                <source type="image/webp" media="(min-width: 1280px)" srcset="img/buckwheat-slim-1000_desktop.webp 1x, img/buckwheat-slim-1000_desktop-@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/buckwheat-slim-1000_tablet.webp 1x, img/buckwheat-slim-1000_tablet-@2x.webp 2x">
+                <source type="image/webp" srcset="img/buckwheat-slim-1000.webp 1x, img/buckwheat-slim-1000-@2x.webp 2x">
+                <source media="(min-width: 1280px)" srcset="img/buckwheat-slim-1000_desktop.png, img/buckwheat-slim-1000_desktop-@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/buckwheat-slim-1000_tablet.png, img/buckwheat-slim-1000_tablet-@2x.png 2x">
                 <img class="product__img" src="img/buckwheat-slim-1000.png" srcset="img/buckwheat-slim-1000-@2x.png 2x" width="84" height="101" alt="Средний пакет корма с гречкой"/>
               </picture>
             </a>
@@ -244,8 +262,11 @@
             </h3>
             <a class="product__link" href="#">
               <picture>
-                <source media="(min-width: 1280px" srcset="img/rice-slim-500_desktop.png, img/rice-slim-500_desktop-@2x.png 2x">
-                <source media="(min-width: 768px" srcset="img/rice-slim-500_tablet.png, img/rice-slim-500_tablet-@2x.png 2x">
+                <source type="image/webp" media="(min-width: 1280px)" srcset="img/buckwheat-slim-500_desktop.webp 1x, img/buckwheat-slim-500_desktop-@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/rice-slim-500_tablet.webp 1x, img/buckwheat-slim-500_tablet-@2x.webp 2x">
+                <source type="image/webp" srcset="img/rice-slim-500.webp 1x, img/rice-slim-500-@2x.webp 2x">
+                <source media="(min-width: 1280px)" srcset="img/rice-slim-500_desktop.png, img/rice-slim-500_desktop-@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/rice-slim-500_tablet.png, img/rice-slim-500_tablet-@2x.png 2x">
                 <img src="img/rice-slim-500.png" srcset="img/rice-slim-500-@2x.png 2x" width="72" height="84" alt="Небольшой пакет корма с рисом"/>
               </picture>
             </a>
@@ -274,41 +295,47 @@
           </li>
         </ul>
       </section>
-      <section class="additional-products container">
-        <h2 class="additional-products__title">Дополнительные товары</h2>
-        <div class="additional-products__wrapper">
-          <ul class="catalog__additional add-list list-reset">
-            <li class="add-list__item add">
-              <h3 class="add__title">Сахарозаменитель</h3>
-              <p class="add__count">1 упаковка (100 г)</p>
-              <p class="add__price">200 <span class="add__money">р.</span></p>
-              <a class="add__button button button--primary" href="#">Заказать</a>
-            </li>
-            <li class="add-list__item add">
-              <h3 class="add__title">Питьевая вода</h3>
-              <p class="add__count">5 литров</p>
-              <p class="add__price">50 <span class="add__money">р.</span></p>
-              <a class="add__button button button--primary" href="#">Заказать</a>
-            </li>
-            <li class="add-list__item add">
-              <h3 class="add__title">Молоко</h3>
-              <p class="add__count">1 литр</p>
-              <p class="add__price">100 <span class="add__money">р.</span></p>
-              <a class="add__button button button--primary" href="#">Заказать</a>
-            </li>
-            <li class="add-list__item add">
-              <h3 class="add__title">Витамины</h3>
-              <p class="add__count">1 упаковка (30 г)</p>
-              <p class="add__price">300 <span class="add__money">р.</span></p>
-              <a class="add__button button button--primary" href="#">Заказать</a>
-            </li>
-          </ul>
-          <div class="gift">
-            <p class="gift__text">
-              Закажите все<br>
-              и получите чехол для<br>
-              кота в подарок!
-            </p>
+      <section class="additional-products">
+        <div class="container">
+          <h2 class="additional-products__title">
+            <span>
+              Дополнительные товары
+            </span>
+          </h2>
+          <div class="additional-products__wrapper">
+            <ul class="catalog__additional add-list list-reset">
+              <li class="add-list__item add">
+                <h3 class="add__title">Сахарозаменитель</h3>
+                <p class="add__count">1 упаковка (100 г)</p>
+                <p class="add__price">200 <span class="add__money">р.</span></p>
+                <a class="add__button button button--primary" href="#">Заказать</a>
+              </li>
+              <li class="add-list__item add">
+                <h3 class="add__title">Питьевая вода</h3>
+                <p class="add__count">5 литров</p>
+                <p class="add__price">50 <span class="add__money">р.</span></p>
+                <a class="add__button button button--primary" href="#">Заказать</a>
+              </li>
+              <li class="add-list__item add">
+                <h3 class="add__title">Молоко</h3>
+                <p class="add__count">1 литр</p>
+                <p class="add__price">100 <span class="add__money">р.</span></p>
+                <a class="add__button button button--primary" href="#">Заказать</a>
+              </li>
+              <li class="add-list__item add">
+                <h3 class="add__title">Витамины</h3>
+                <p class="add__count">1 упаковка (30 г)</p>
+                <p class="add__price">300 <span class="add__money">р.</span></p>
+                <a class="add__button button button--primary" href="#">Заказать</a>
+              </li>
+            </ul>
+            <div class="gift">
+              <p class="gift__text">
+                Закажите все<br>
+                и получите чехол для<br>
+                кота в подарок!
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -332,12 +359,15 @@
         <div class="location__map map">
           <div class="map__img">
             <picture>
-              <source media="(min-width: 1280px" srcset="img/map-img-desktop.png, img/map-img-desktop-@2x.png 2x">
-              <source media="(min-width: 768px" srcset="img/map-img-tablet.png, img/map-img-tablet-@2x.png 2x">
+              <source type="image/webp" media="(min-width: 1280px)" srcset="img/map-img-desktop.webp 1x, img/map-img-desktop-@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="map-img-tablet.webp 1x, img/map-img-tablet-@2x.webp 2x">
+              <source type="image/webp" srcset="img/map-img-mobile.webp 1x, img/map-img-mobile-@2x.webp 2x">
+              <source media="(min-width: 1280px)" srcset="img/map-img-desktop.png, img/map-img-desktop-@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/map-img-tablet.png, img/map-img-tablet-@2x.png 2x">
               <img src="img/map-img-mobile.png" srcset="img/map-img-mobile-@2x.png 2x" width="320" height="362" alt="Адрес компании на карте"/>
             </picture>
           </div>
-          <div class="map__leaflet" id="map"></div>
+          <div class="map__leaflet display-none" id="map"></div>
         </div>
       </section>
     </main>

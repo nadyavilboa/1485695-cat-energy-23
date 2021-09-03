@@ -1,26 +1,24 @@
-import gulpSass from "gulp-sass";
-import nodeSass from "node-sass";
-const sass = gulpSass(nodeSass); //источник https://stackoverflow.com/questions/68176320/gulp-sass-5-0-how-to-use-compiler-with-import-instead-of-require
-
-const gulp = require("gulp");
-const plumber = require("gulp-plumber");
-const sourcemap = require("gulp-sourcemaps");
-//const sass = require("gulp-sass"); //по материалам лекции
-const postcss = require("gulp-postcss");
-const autoprefixer = require("autoprefixer");
-const sync = require("browser-sync").create();
-const htmlmin = require("gulp-htmlmin");
-const csso = require("postcss-csso");
-const rename = require("gulp-rename");
-const terser = require("gulp-terser");
-const squoosh = require("gulp-libsquoosh");
-const webp = require("gulp-webp");
-const del = require("del");
+const gulp = require('gulp');
+const plumber = require('gulp-plumber');
+const sourcemap = require('gulp-sourcemaps');
+const gulpSass = require('gulp-sass');
+const nodeSass = require('node-sass');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const sync = require('browser-sync').create();
+const htmlmin = require('gulp-htmlmin');
+const csso = require('postcss-csso');
+const rename = require('gulp-rename');
+const terser = require('gulp-terser');
+const squoosh = require('gulp-libsquoosh');
+const webp = require('gulp-webp');
+const del = require('del');
+const sass = gulpSass(nodeSass);
 
 // Styles
 
 const styles = () => {
-  return gulp.src("source/sass/style.scss")
+  return gulp.src('source/sass/style.scss')
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
@@ -28,9 +26,9 @@ const styles = () => {
       autoprefixer(),
       csso()
     ]))
-    .pipe(rename("style.min.css"))
-    .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"))
+    .pipe(rename('style.min.css'))
+    .pipe(sourcemap.write('.'))
+    .pipe(gulp.dest('build/css'))
     .pipe(sync.stream());
 }
 
@@ -49,19 +47,19 @@ exports.html = html;
 // Scripts
 
 const scripts = () => {
-  return gulp.src(["source/js/*.js", "!source/js/main.js"])
+  return gulp.src(['source/js/*.js', '!source/js/main.js'])
     .pipe(terser())
     .pipe(gulp.dest('build/js'))
 }
 
 exports.scripts = scripts;
 
-// script main.js - отдельно, потому что только его нужно переименовать
+// script main.js
 
 const scriptMain = () => {
   return gulp.src('source/js/main.js')
     .pipe(terser())
-    .pipe(rename("main.min.js"))
+    .pipe(rename('main.min.js'))
     .pipe(gulp.dest('build/js'))
 }
 
@@ -100,7 +98,7 @@ const copy = (done) => {
   gulp.src([
     'source/fonts/*.{woff2,woff}',
     'source/*.ico',
-    'manifest.webmanifest',
+    'source/manifest.webmanifest',
   ], {
     base: 'source'
   })
@@ -137,8 +135,8 @@ exports.server = server;
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch('source/sass/**/*.scss', gulp.series('styles'));
+  gulp.watch('source/*.html').on('change', sync.reload);
 }
 
 //Build

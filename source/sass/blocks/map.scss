@@ -19,10 +19,20 @@
   height: 100%;
   position: absolute;
   top: 0;
+  z-index: 0;
+}
+
+.map__img--under {
   z-index: -5;
 
   @media (min-width: $desktop-width) {
     z-index: -15;
+  }
+
+  &::after {
+    @media (min-width: $desktop-width) {
+      z-index: -10;
+    }
   }
 }
 
@@ -61,10 +71,6 @@
       background-size: 113px auto;
     }
   }
-
-  @media (min-width: $desktop-width) {
-    z-index: -10;
-  }
 }
 
 .map__leaflet {
@@ -72,6 +78,10 @@
   top: 0;
   width: 100%;
   height: 100%;
+  z-index: -15;
+}
+
+.map__leaflet--script {
   z-index: 5;
 
   @media (min-width: $tablet-width) {

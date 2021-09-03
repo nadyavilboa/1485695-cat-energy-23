@@ -4,6 +4,22 @@
   text-align: center;
   padding-top: 27px;
 
+  @media (min-width: $tablet-width) {
+    padding-left: 90px;
+    background: none;
+    color: $basic-black;
+    text-align: left;
+    padding-bottom: 526px;
+    padding-top: 62px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 80px;
+    padding-top: 111px;
+    padding-bottom: 54px;
+    margin-bottom: 115px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -13,6 +29,23 @@
     height: 302px;
     background-color: $promo-background;
     z-index: -2;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      content: "";
+      position: absolute;
+      display: block;
+      margin-top: -134px;
+      top: 0;
+      left: 50%;
+      width: 50%;
+      height: 694px;
+      background-color: $promo-background;
+      z-index: -2;
+    }
   }
 
   &::after {
@@ -31,45 +64,12 @@
       background-image: url("../img/promo-background-@2x.png");
       background-size: 709px auto;
     }
-  }
 
-  @media (min-width: $tablet-width) {
-    padding-left: 90px;
-    background: none;
-    color: $basic-black;
-    text-align: left;
-    padding-bottom: 526px;
-    padding-top: 62px;
-
-    &::before {
+    @media (min-width: $tablet-width) {
       display: none;
     }
 
-    &::after {
-      display: none;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-left: 80px;
-    padding-top: 111px;
-    padding-bottom: 54px;
-    margin-bottom: 115px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      display: block;
-      margin-top: -134px;
-      top: 0;
-      left: 50%;
-      width: 50%;
-      height: 694px;
-      background-color: $promo-background;
-      z-index: -2;
-    }
-
-    &::after {
+    @media (min-width: $desktop-width) {
       content: "";
       position: absolute;
       display: block;

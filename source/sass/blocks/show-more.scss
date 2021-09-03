@@ -9,8 +9,14 @@
     background-image: none;
     padding: 124px 38px 38px;
     border: 2px solid $special-background;
+  }
 
-    &::before {
+  @media (min-width: $desktop-width) {
+    padding-bottom: 40px;
+  }
+
+  &::before {
+    @media (min-width: $tablet-width) {
       content: "";
       display: block;
       position: absolute;
@@ -21,12 +27,8 @@
       background-color: $basic-white;
       border-bottom: 2px solid $special-background;
     }
-  }
 
-  @media (min-width: $desktop-width) {
-    padding-bottom: 40px;
-
-    &::before {
+    @media (min-width: $desktop-width) {
       height: 86px;
     }
   }
@@ -43,6 +45,12 @@
   margin-bottom: 8px;
   text-align: center;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 23px;
+    font-size: 20px;
+    line-height: 22px;
+  }
+
   &::before {
     content: "";
     display: block;
@@ -52,14 +60,8 @@
     background-image: url("../img/plus_small.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
-  }
 
-  @media (min-width: $tablet-width) {
-    margin-bottom: 23px;
-    font-size: 20px;
-    line-height: 22px;
-
-    &::before {
+    @media (min-width: $tablet-width) {
       margin: 0 auto 49px;
       width: 60px;
       height: 60px;
