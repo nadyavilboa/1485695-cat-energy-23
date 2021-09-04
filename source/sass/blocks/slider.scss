@@ -127,8 +127,10 @@
     border-radius: 50%;
     background-color: $basic-white;
     filter: drop-shadow(0 1px 3px rgba($basic-black, 0.16));
+  }
 
-    &::after {
+  &::after {
+    @media (min-width: $tablet-width) {
       content: "";
       position: absolute;
       left: 12px;
@@ -165,11 +167,11 @@
     border-bottom: 1px dotted rgba($basic-black, 0.4);
     padding: 0;
 
-    &:hover {
+    &:hover,
+    &:focus {
       border-bottom: 1px solid rgba($basic-black, 0.4);
     }
 
-    &:focus,
     &:active {
       border-bottom: 1px solid $example-background;
     }

@@ -18,14 +18,12 @@
   }
 }
 
-.academy__link:hover .academy__logo {
-  fill: $basic-green;
-}
-
+.academy__link:hover .academy__logo,
 .academy__link:focus .academy__logo {
   fill: $basic-green;
   opacity: 1;
 }
+
 
 .academy__link:active {
   opacity: 0.3;

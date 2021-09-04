@@ -117,16 +117,4 @@ const setMapView = () => {
   }
 };
 
-const resizeWindow = () => {
-
-  if (mediaQueryTablet.matches) {
-    map.removeLayer(marker);
-  } else {
-    map.removeLayer(markerTablet);
-  }
-
-  setMapView();
-
-}
-
-export { map, setMapView, resizeWindow };
+export { mediaQueryTablet, map, marker, markerTablet, setMapView };

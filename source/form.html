@@ -9,8 +9,7 @@
       href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
       integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
       crossorigin=""/>
-    <link rel="stylesheet" href="css/style.css"/>
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/style.min.css"/>
     <link rel="icon" href="favicon.ico"/>
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml"/>
     <link rel="apple-touch-icon" href="img/152.png"/>
@@ -21,19 +20,19 @@
       <div class="page-header__wrapper">
         <a class="page-header__logo page-header__logo--img" href="index.html">
           <picture>
-            <source media="(min-width: 1280px" srcset="img/icon_logo-desktop.svg">
-            <source media="(min-width: 768px" srcset="img/icon_logo-tablet.svg">
+            <source media="(min-width: 1280px)" srcset="img/icon_logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/icon_logo-tablet.svg">
             <img class="img-logo" src="img/icon-logo.svg" width="33" height="38" alt="Логотип Кэт-энерджи"/>
           </picture>
         </a>
         <a class="page-header__logo page-header__logo--name" href="index.html">
           <img class="name-logo" src="img/header-logo-text.svg" width="100" height="18" alt="Текстовый логотип Кэт-энерджи"/>
         </a>
-        <button class="page-header__toggle page--header__toggle--open" type="button">
+        <button class="page-header__toggle page--header__toggle--open display-none" type="button">
           <span class="visually-hidden">Открыть/закрыть меню</span>
         </button>
       </div>
-      <nav class="main-nav display-none">
+      <nav class="main-nav">
         <ul class="main-nav__list menu list-reset">
           <li class="menu__item">
             <a class="menu__link" href="index.html">Главная</a>
@@ -47,7 +46,7 @@
         </ul>
       </nav>
     </header>
-    <main class="page-main">
+    <main class="page-main page-main--form">
       <h1 class="visually-hidden">Форма обратной связи</h1>
       <section class="user-form container">
         <h2 class="page__title page__title--form">Подбор программы</h2>
@@ -129,7 +128,9 @@
           </fieldset>
           <fieldset class="form-group form-group--user">
             <legend class="form-group__title">
-              Контактные данные (владельца кота)
+              <span>
+                Контактные данные (владельца кота)
+              </span>
             </legend>
             <ul class="form-group__list form-group__list--user list-reset">
               <li class="form__field text-field text-field--user">
@@ -179,7 +180,9 @@
             </ul>
           </fieldset>
           <fieldset class="form-group form-group--comment">
-            <legend class="form-group__title">Комментарий</legend>
+            <legend class="form-group__title">
+              <span>Комментарий</span>
+            </legend>
             <label class="text-field__label visually-hidden" for="cat-description"></label>
             <textarea
               class="text-field__input text-field__input--textarea"
@@ -190,7 +193,9 @@
               placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
           <fieldset class="form-group form-group--ingredients">
-            <legend class="form-group__title">Дополнительно</legend>
+            <legend class="form-group__title">
+              <span>Дополнительно</span>
+            </legend>
             <ul class="form-group__list form-group__list--ingredients list-reset">
               <li class="form__field text-field text-field--checkbox">
                 <input
@@ -259,8 +264,11 @@
         <div class="location__map map">
           <div class="map__img">
             <picture>
-              <source media="(min-width: 1280px" srcset="img/map-img-desktop.png, img/map-img-desktop-@2x.png 2x">
-              <source media="(min-width: 768px" srcset="img/map-img-tablet.png, img/map-img-tablet-@2x.png 2x">
+              <source type="image/webp" media="(min-width: 1280px)" srcset="img/map-img-desktop.webp 1x, img/map-img-desktop-@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/map-img-tablet.webp 1x, img/map-img-tablet-@2x.webp 2x">
+              <source type="image/webp" srcset="img/map-img-mobile.webp 1x, img/map-img-mobile-@2x.webp 2x">
+              <source media="(min-width: 1280px)" srcset="img/map-img-desktop.png, img/map-img-desktop-@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/map-img-tablet.png, img/map-img-tablet-@2x.png 2x">
               <img src="img/map-img-mobile.png" srcset="img/map-img-mobile-@2x.png 2x" width="320" height="362" alt="Адрес компании на карте"/>
             </picture>
           </div>
@@ -307,6 +315,6 @@
       </div>
     </footer>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
-    <script src="js/main.js" type="module"></script>
+    <script src="js/main.min.js" type="module"></script>
   </body>
 </html>

@@ -18,41 +18,48 @@
   margin-bottom: 36px;
   position: relative;
 
-  &::after {
-    content: "";
-    display: inline-block;
-    vertical-align: auto;
-    position: absolute;
-    width: calc(100% - 228px);
-    height: 2px;
-    top: 15px;
-    right: -30px;
-    background-color: $basic-green;
-  }
+  span {
+    padding-right: 20px;
+    background-color: $basic-white;
 
+    @media (min-width: $tablet-width) {
+      padding: 0 37px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 40px;
+      padding-right: 35px;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 36px;
     line-height: 36px;
     border-top: none;
     margin-bottom: 80px;
+    padding: 0 37px;
+  }
 
-    &::before {
-      content: "";
-      display: inline-block;
-      vertical-align: auto;
-      position: absolute;
-      width: 30px;
-      height: 2px;
-      top: 20px;
-      left: -30px;
-      margin-right: 30px;
-      background-color: $basic-green;
-    }
+  @media (min-width: $desktop-width) {
+    margin-left: -40px;
+  }
 
-    &::after {
-      width: calc(100% - 338px);
-      top: 20px;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 80vw;
+    height: 2px;
+    left: 50%;
+    top: 15px;
+    background-color: $basic-green;
+    z-index: -1;
+
+    @media (min-width: $tablet-width) {
+      width: 102vw;
+      top: 23px;
+      right: 0;
+      margin-left: -50vw;
+      margin-right: -50vw;
     }
   }
 }
@@ -60,7 +67,8 @@
 .additional-products__wrapper {
   @media (min-width: $desktop-width) {
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 1fr 245px;
     grid-gap: 80px;
+    padding-bottom: 69px;
   }
 }

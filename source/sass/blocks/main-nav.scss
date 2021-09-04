@@ -1,22 +1,38 @@
 .main-nav {
   margin: 0;
-  position: absolute;
-  width: calc(100% - 40px);
-  z-index: 5;
+  display: block;
+  width: 100%;
 
   @media (min-width: $tablet-width) {
-    display: block;
     position: inherit;
+    top: 0;
     z-index: 0;
     width: auto;
   }
 }
 
+.main-nav--script-close {
+  display: none;
+}
+
+.main-nav--script-open {
+  display: block;
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  top: 100%;
+}
+
 .main-nav__list {
   background-color: $basic-white;
+  width: 100%;
+  border-bottom: 1px solid $border-menu;
 
   @media (min-width: $tablet-width) {
+    background-color: rgba($basic-white, 0);
+    border-bottom: none;
     display: flex;
+    width: auto;
   }
 }
 
@@ -82,6 +98,8 @@
 
 .menu__link--index,
 .menu__link--index-current {
+  color: $basic-black;
+
   @media (min-width: $desktop-width) {
     color: $basic-white;
     padding: 15px 0 8px;
@@ -100,6 +118,10 @@
 
 .menu__link--index-current:hover {
   color: $basic-black;
+
+  @media (min-width: $desktop-width) {
+    color: $basic-white;
+  }
 }
 
 .menu__link--current:hover {
