@@ -14,18 +14,18 @@
 
 .location__description {
   position: relative;
-  padding: 28px 20px 26px;
+  padding: 28px 4px 26px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   @media (min-width: $tablet-width) {
-    padding: 66px 72px 58px;
+    padding: 63px 41px 58px;
   }
 
   @media (min-width: $desktop-width) {
     order: 0;
-    padding: 66px 89px 51px 76px;
+    padding: 61px 89px 51px 76px;
     width: 570px;
     z-index: 5;
     background-color: $basic-white;
@@ -45,13 +45,30 @@
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
-    line-height: 21px;
+    line-height: 22px;
   }
 }
 
 .location__text--address {
   @media (min-width: $tablet-width) {
     margin-bottom: 20px;
+    text-align: right;
+    font-size: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
+}
+
+.location__text--city {
+  @media (min-width: $tablet-width) {
+    text-align: right;
+    font-size: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
   }
 }
 

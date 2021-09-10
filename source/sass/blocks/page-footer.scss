@@ -1,5 +1,5 @@
 .page-footer {
-  padding: 20px 0;
+  padding: 19px 0 32px;
   background-color: $special-background;
 
   @media (min-width: $tablet-width) {
@@ -40,6 +40,7 @@
     justify-content: flex-start;
     border-bottom: none;
     padding: 0;
+    margin-right: 21px;
   }
 }
 

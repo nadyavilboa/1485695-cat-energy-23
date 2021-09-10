@@ -3,11 +3,12 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+  padding: 15px 0;
 
   @media (min-width: $tablet-width) {
     background-color: $basic-white;
     background-image: none;
-    padding: 124px 38px 38px;
+    padding: 135px 36px 38px;
     border: 2px solid $special-background;
   }
 
@@ -51,13 +52,19 @@
     line-height: 22px;
   }
 
+  span {
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
+  }
+
   &::before {
     content: "";
     display: block;
     width: 30px;
     height: 30px;
     margin: 0 auto 23px;
-    background-image: url("../img/plus_small.svg");
+    background-image: url("../img/plus.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
 
@@ -65,7 +72,7 @@
       margin: 0 auto 49px;
       width: 60px;
       height: 60px;
-      background-image: url("../img/plus.svg");
+      background-image: url("../img/plus_big.svg");
     }
   }
 }
@@ -81,6 +88,12 @@
     margin-bottom: 87px;
     font-size: 16px;
     line-height: 18px;
+  }
+
+  span {
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
   }
 }
 

@@ -11,6 +11,7 @@ const csso = require('postcss-csso');
 const rename = require('gulp-rename');
 const terser = require('gulp-terser');
 const squoosh = require('gulp-libsquoosh');
+const svgstore = require('gulp-svgstore');
 const webp = require('gulp-webp');
 const del = require('del');
 const sass = gulpSass(nodeSass);
@@ -92,6 +93,19 @@ const createWebp = () => {
 
 exports.createWebp = createWebp;
 
+// Sprite
+
+const sprite = () => {
+  return gulp.src('source/img/icons/*.svg')
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest('build/img'));
+}
+
+exports.sprite = sprite;
+
 // Copy
 
 const copy = (done) => {
@@ -132,11 +146,19 @@ const server = (done) => {
 
 exports.server = server;
 
+// Reload
+
+const reload = (done) => {
+  sync.reload();
+  done();
+}
+
 // Watcher
 
 const watcher = () => {
-  gulp.watch('source/sass/**/*.scss', gulp.series('styles'));
-  gulp.watch('source/*.html').on('change', sync.reload);
+  gulp.watch('source/sass/**/*.scss', gulp.series(styles));
+  gulp.watch('source/js/*.js', gulp.series(scripts));
+  gulp.watch('source/*.html', gulp.series(html, reload));
 }
 
 //Build
@@ -150,7 +172,8 @@ const build = gulp.series (
     html,
     scripts,
     scriptMain,
-    createWebp
+    createWebp,
+    sprite
   ),
 )
 
@@ -165,7 +188,8 @@ exports.default = gulp.series(
     html,
     scripts,
     scriptMain,
-    createWebp
+    createWebp,
+    sprite
   ),
     gulp.series(
       server,

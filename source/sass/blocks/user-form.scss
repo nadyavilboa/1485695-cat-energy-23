@@ -1,15 +1,14 @@
 .user-form {
-  padding: 37px 20px 32px;
+  padding: 28px 20px 32px;
   border-top: 1px solid $border-block;
 
   @media (min-width: $tablet-width) {
-    padding: 54px 70px 72px;
+    padding: 30px 70px 72px;
     border: 0;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 56px;
-    padding-bottom: 82px;
+    padding: 38px 30px 82px;
   }
 }
 
@@ -18,12 +17,16 @@
   text-transform: uppercase;
   color: $basic-black;
   margin: 0;
-  margin-bottom: 39px;
+  margin-bottom: 36px;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
-    margin-bottom: 66px;
+    margin-bottom: 61px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 67px;
   }
 }
 
@@ -39,27 +42,36 @@
   }
 }
 
-.user-form__note {
-  line-height: 16px;
-  color: $basic-black;
-  text-align: center;
-
-  @media (min-width: $tablet-width) {
-    font-size: 16px;
-    text-align: left;
-  }
-}
-
 .user-form__button {
   width: 100%;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 21px;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    padding: 13px 20px;
     width: 282px;
     font-size: 20px;
-    line-height: 20px;
+    line-height: 26px;
   }
 
   @media (min-width: $desktop-width) {
     width: 100%;
   }
 }
+
+.user-form__note {
+  line-height: 16px;
+  margin: 0;
+  color: $basic-black;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    text-align: left;
+  }
+}
+

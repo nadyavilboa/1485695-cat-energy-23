@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 22px;
+  fill: $special-icons;
 
   @media (min-width: $tablet-width) {
     margin-top: 0;
@@ -11,15 +12,15 @@
 
 .academy__title {
   font-size: 16px;
-  color: $basic-black;
+  color: $text-special;
 
   @media (min-width: $tablet-width) {
     margin-right: 22px;
   }
 }
 
-.academy__link:hover .academy__logo,
-.academy__link:focus .academy__logo {
+.academy__link:hover,
+.academy__link:focus {
   fill: $basic-green;
   opacity: 1;
 }

@@ -1,9 +1,9 @@
 .additional-products {
-  padding-top: 25px;
+  padding-top: 37px;
   border-top: 1px solid $border-block;
 
   @media (min-width: $tablet-width) {
-    padding-top: 30px;
+    padding-top: 68px;
     border-top: none;
   }
 }
@@ -15,7 +15,7 @@
   font-weight: 400;
   color: $basic-black;
   margin: 0;
-  margin-bottom: 36px;
+  margin-bottom: 34px;
   position: relative;
 
   span {
@@ -37,7 +37,6 @@
     line-height: 36px;
     border-top: none;
     margin-bottom: 80px;
-    padding: 0 37px;
   }
 
   @media (min-width: $desktop-width) {
@@ -69,6 +68,6 @@
     display: grid;
     grid-template-columns: 1fr 245px;
     grid-gap: 80px;
-    padding-bottom: 69px;
+    padding-bottom: 83px;
   }
 }

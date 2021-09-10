@@ -1,8 +1,9 @@
 .gift {
-  padding: 20px;
+  padding: 55px 50px 43px;
   background-image: url("../img/gift-photo-mobile.png");
   background-repeat: no-repeat;
   background-position: 0 50%;
+  background-color: $gift-background;
   background-size: cover;
   margin-bottom: 35px;
 
@@ -12,7 +13,7 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 76px;
-    padding: 57px 124px 69px 78px;
+    padding: 57px 124px 59px 78px;
     background-image: url("../img/gift-photo-tablet.png");
 
     @media (min-resolution: 2dppx) {
@@ -22,7 +23,7 @@
 
   @media (min-width: $desktop-width) {
     margin-bottom: 0;
-    padding: 30px;
+    padding: 60px 40px 42px;
     background-image: url("../img/gift-photo-desktop.png");
 
     @media (min-resolution: 2dppx) {
@@ -40,6 +41,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+  }
 
   &::before {
     content: "";
@@ -50,24 +64,12 @@
     background-repeat: no-repeat;
     background-position: 0 0;
     margin-bottom: 48px;
-  }
 
-  @media (min-width: $tablet-width) {
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
-
-    &::before {
+    @media (min-width: $tablet-width) {
       margin-bottom: 0;
     }
-  }
 
-  @media (min-width: $desktop-width) {
-    text-align: center;
-    flex-direction: column;
-    justify-content: center;
-
-    &::before {
+    @media (min-width: $desktop-width) {
       margin-bottom: 46px;
     }
   }
