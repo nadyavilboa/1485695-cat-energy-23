@@ -12,7 +12,7 @@
 
 .page-header__wrapper {
   padding-top: 10px;
-  padding-bottom: 17px;
+  padding-bottom: 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,6 +23,8 @@
 }
 
 .page-header__logo--img {
+  margin-right: -12px;
+
   @media (min-width: $tablet-width) {
     margin-right: 12px;
   }
@@ -38,6 +40,10 @@
     width: 70px;
     height: 59px;
   }
+}
+
+.page-header__logo--name {
+  margin-top: 5px;
 }
 
 .page-header__logo--name img {
@@ -61,8 +67,6 @@
 }
 
 .page-header__toggle {
-  //display: inline-block;
-  vertical-align: auto;
   width: 24px;
   height: 20px;
   margin: 0;

@@ -14,6 +14,7 @@
   align-content: start;
   min-height: 100%;
   margin: 0;
+  counter-reset: section;
 }
 
 .page__title {
@@ -23,14 +24,17 @@
   line-height: 36px;
   color: $basic-black;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .page__title--form {
   margin-bottom: 37px;
 
   @media (min-width: $tablet-width) {
-    font-size: 60px;
-    line-height: 60px;
     border-top: none;
     margin-bottom: 54px;
   }
@@ -38,4 +42,8 @@
 
 .page__title--catalog {
   margin-bottom: 41px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 82px;
+  }
 }

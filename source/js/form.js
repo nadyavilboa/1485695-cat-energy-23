@@ -1,52 +1,38 @@
-const nameCat = document.querySelector('#cat-name');
-const weightCat = document.querySelector('#cat-weight');
-const ageCat = document.querySelector('#cat-age');
-const userEmail = document.querySelector('#user-email');
-const userPhone = document.querySelector('#user-phone');
+const inputValidate = document.querySelectorAll('.js-input-validate');
 
-const inputsImportant = [nameCat, weightCat, userEmail, userPhone];
+const inputData = () => {
+  inputValidate.forEach(element => {
+    if(element.classList.contains('text-field__input--error')) {
+      element.classList.remove('text-field__input--error');
+    }
 
-let isStorageSupport = true;
-let storageNameCat = "";
-let storageWeightCat = "";
-let storageEmail = "";
-let storagePhone = "";
+    if(element.classList.contains('text-field__input--email')) {
+      element.classList.remove('text-field__input--error-email');
+    }
 
-try {
-  storageNameCat = localStorage.getItem('name');
-  storageWeightCat = localStorage.getItem('weight');
-  storageEmail = localStorage.getItem('email');
-  storagePhone = localStorage.getItem('phone');
-} catch (err) {
-  isStorageSupport = false;
-}
-
-const initialForm = () => {
-  if (storageNameCat && storageWeightCat && storageEmail && storagePhone) {
-    nameCat.value = storageNameCat;
-    weightCat.value = storageWeightCat;
-    userEmail.value = storageEmail;
-    userPhone.value = storagePhone;
-    ageCat.focus();
-  } else {
-    nameCat.focus();
-  }
+    if(element.classList.contains('text-field__input--phone')) {
+      element.classList.remove('text-field__input--error-phone');
+    }
+  });
 }
 
 const sendForm = (evt) => {
   evt.preventDefault();
-  for(let i = 0; i < inputsImportant.length; i++) {
-    if (!inputsImportant[i].value) {
-      inputsImportant[i].classList.add('text-field__input--error');
-    } else {
-      if (isStorageSupport) {
-        localStorage.setItem('name', nameCat.value);
-        localStorage.setItem('weight', weightCat.value);
-        localStorage.setItem('email', userEmail.value);
-        localStorage.setItem('email', userEmail.value);
+  inputValidate.forEach(element => {
+    if (!element.value) {
+      element.classList.add('text-field__input--error');
+
+      if(element.classList.contains('text-field__input--email')) {
+        element.classList.add('text-field__input--error-email');
       }
+
+      if(element.classList.contains('text-field__input--phone')) {
+        element.classList.add('text-field__input--error-phone');
+      }
+    } else {
+      alert('Форма успешно отправлена!');
     }
-  }
+  });
 }
 
-export { initialForm, sendForm };
+export { inputValidate, inputData, sendForm };

@@ -14,10 +14,18 @@
 }
 
 .food-list__item {
-  padding-top: 19px;
+  padding-top: 21px;
   padding-bottom: 25px;
   position: relative;
 
+  @media (min-width: $tablet-width) {
+    padding: 8px 36px 39px;
+    background-image: linear-gradient($basic-white 16%, $special-background 16%, $special-background 100%);
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 38px 40px;
+  }
 
   &::before {
     content: "";
@@ -28,18 +36,9 @@
     right: -20px;
     height: 1px;
     background-color: $border-block;
-  }
 
-  @media (min-width: $tablet-width) {
-    padding: 8px 36px 39px;
-    background-image: linear-gradient($basic-white 16%, $special-background 16%, $special-background 100%);
-
-    &::before {
+    @media (min-width: $tablet-width) {
       display: none;
     }
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 0 30px 40px;
   }
 }

@@ -50,7 +50,11 @@
     border-top: none;
     display: flex;
     align-items: center;
-    margin-right: 34px;
+    margin-right: 36px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
@@ -89,10 +93,15 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 20px 0 10px;
+    padding: 25px 0 7px;
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 
@@ -102,9 +111,6 @@
 
   @media (min-width: $desktop-width) {
     color: $basic-white;
-    padding: 15px 0 8px;
-    font-size: 20px;
-    line-height: 30px;
 
     &:hover {
       color: rgba($basic-white, 0.6);

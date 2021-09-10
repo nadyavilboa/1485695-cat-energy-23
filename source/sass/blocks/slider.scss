@@ -8,7 +8,21 @@
 .slider__photos {
   display: flex;
   justify-content: center;
-  margin-bottom: 23px;
+  margin-bottom: 35px;
+  margin-left: -39px;
+
+  @media (min-width: 340px) {
+    margin-left: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: -73px;
+    margin-bottom: 22px;
+  }
 }
 
 .slider__img {
@@ -56,6 +70,7 @@
   @media (min-width: $tablet-width) {
     display: inline;
     vertical-align: auto;
+    margin-top: 12px;
     width: 354px;
     height: 540px;
     background-image: url("../img/after-tablet.png");
@@ -71,7 +86,7 @@
     top: 0;
     left: -40px;
     width: 325px;
-    height: 654px;
+    height: 520px;
     background-image: url("../img/after-desktop.png");
 
     @media (min-resolution: 2dppx) {
@@ -85,11 +100,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: 27px;
-  margin-right: 25px;
+  margin-left: 38px;
+  margin-right: 34px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 68px;
+    margin-right: 69px;
+  }
 
   @media (min-width: $desktop-width) {
     margin: 0;
+    width: 584px;
   }
 }
 

@@ -1,5 +1,5 @@
 .social {
-  padding: 20px 0;
+  padding: 20px 82px 17px 73px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,14 +11,23 @@
   }
 }
 
-.social__link:hover .social__icon,
-.social__link:focus .social__icon {
+.social__link {
+  fill: $special-icons;
+}
+
+.social__link--facebook {
+  fill: none;
+  stroke: $special-icons;
+}
+
+.social__link:hover,
+.social__link:focus {
   fill: $basic-green;
   opacity: 1;
 }
 
-.social__link:hover .social__icon--fb,
-.social__link:focus .social__icon--fb {
+.social__link--facebook:hover,
+.social__link--facebook:focus {
   fill: none;
   stroke: $basic-green;
   opacity: 1;
@@ -26,4 +35,25 @@
 
 .social__link:active {
   opacity: 0.3;
+}
+
+.social__link--vk svg {
+  @media (min-width: $tablet-width) {
+    width: 30px;
+    height: 22px;
+  }
+}
+
+.social__link--instagram svg {
+  @media (min-width: $tablet-width) {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+.social__link--facebook svg {
+  @media (min-width: $tablet-width) {
+    width: 18px;
+    height: 27px;
+  }
 }

@@ -33,7 +33,21 @@
   }
 }
 
+.text-field--radio {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 13px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
 .text-field--checkbox {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+
   @media (min-width: $desktop-width) {
     &:last-child {
       margin-bottom: 20px;
@@ -59,17 +73,23 @@
 
 .text-field__label {
   white-space: nowrap;
+  margin-right: 12px;
+}
+
+.text-field__label--email {
+  @media (min-width: $tablet-width) {
+    margin-right: 20px;
+  }
 }
 
 .text-field__input {
-  padding: 13px 15px 15px;
+  padding: 13px 15px 13px;
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
   outline: none;
   border: 1px solid $border-input;
-  margin-left: 13px;
   padding-right: 15px;
 
   &:hover {
@@ -80,11 +100,10 @@
     border: 1px solid $text-special;
     outline: 1px solid $text-special;
   }
-}
 
-.text-field__input--error {
-  border: 1px solid $border-error;
-  outline: 1px solid $border-error;
+  @media (min-width: $tablet-width) {
+    padding: 10px 23px;
+  }
 }
 
 .text-field__input::placeholder {
@@ -100,12 +119,43 @@
   }
 }
 
+.text-field__input--email:focus + .text-field__icon--email {
+  stroke: $basic-green;
+}
+
+.text-field__input--phone:focus + .text-field__icon--phone {
+  fill: $basic-green;
+}
+
+
+.text-field__input--error {
+  border: 1px solid $border-error;
+  outline: 1px solid $border-error;
+}
+
+.text-field__input--error-email + .text-field__icon--email {
+  stroke: $border-error;
+}
+
+.text-field__input--error-phone + .text-field__icon--phone {
+  fill: $border-error;
+}
+
 .text-field__icon {
-  display: inline-flex;
-  vertical-align: auto;
   width: 20px;
   position: absolute;
-  right: 19px;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.text-field__icon--email {
+  stroke: $product-title;
+  fill: none;
+}
+
+.text-field__icon--phone {
+  fill: $product-title;
 }
 
 .text-field__label--radio,
@@ -113,6 +163,10 @@
   position: relative;
   display: flex;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 0;
+  }
 }
 
 .text-field__label--radio::before {
@@ -124,6 +178,12 @@
   border: 1px solid $special-border;
   border-radius: 50%;
   margin-right: 15px;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+  }
 }
 
 .text-field__input--radio:hover ~ .text-field__label--radio::before {
@@ -150,6 +210,12 @@
   height: 30px;
   border: 1px solid $special-border;
   margin-right: 15px;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+  }
 }
 
 .text-field__input--checkbox:hover ~ .text-field__label--checkbox::before {
@@ -177,6 +243,13 @@
   position: absolute;
   top: 8px;
   left: 8px;
+
+  @media (min-width: $tablet-width) {
+    width: 18px;
+    height: 18px;
+    top: 11px;
+    left: 11px;
+  }
 }
 
 .text-field__input--checkbox:checked ~ .text-field__label--checkbox::after {
@@ -190,8 +263,11 @@
   left: 6px;
 
   @media (min-width: $tablet-width) {
-    width: 26px;
-    height: 26px;
+    width: 24px;
+    height: 18px;
+    background-image: url("../img/check-tablet.svg");
+    top: 11px;
+    left: 7px;
   }
 }
 
@@ -199,5 +275,10 @@
   width: 100%;
   resize: vertical;
   margin: 0;
+  padding: 7px 12px 13px 15px;
   border: 1px solid $border-input;
+
+  @media (min-width: $tablet-width) {
+    max-height: 174px;
+  }
 }
