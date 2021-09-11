@@ -3,14 +3,47 @@
   width: 100%;
 
   @media (min-width: $tablet-width) {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 24px;
+    padding-top: 15px;
     padding-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 44px;
+    padding-bottom: 14px;
+  }
+}
+
+.page-header--index::after {
+  @media (min-width: $desktop-width) {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    background-image: url("../img/index-background-desktop.png");
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-color: $promo-background;
+    width: 50%;
+    height: 694px;
+    overflow-y: visible;
+    z-index: -1;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-background-desktop-@2x.png");
+      background-size: 720px auto;
+    }
   }
 }
 
 .page-header__wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.page-header__short-wrapper {
   padding-top: 10px;
   padding-bottom: 12px;
   display: flex;

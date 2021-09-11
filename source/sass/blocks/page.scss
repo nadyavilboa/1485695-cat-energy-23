@@ -15,6 +15,7 @@
   min-height: 100%;
   margin: 0;
   counter-reset: section;
+  overflow-y: visible;
 }
 
 .page__title {
@@ -37,6 +38,10 @@
   @media (min-width: $tablet-width) {
     border-top: none;
     margin-bottom: 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 58px;
   }
 }
 

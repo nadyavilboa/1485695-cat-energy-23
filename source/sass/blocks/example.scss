@@ -8,7 +8,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    background-image: linear-gradient($basic-white 30%, $example-background 30%, $example-background 100%);
+    background-image:
+      linear-gradient(to bottom, $basic-white 185px, transparent 185px),
+      linear-gradient(to left, $slider-gradient calc(50% - 326px), $special-background calc(50% - 326px));
     border-top: none;
   }
 }

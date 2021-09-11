@@ -15,9 +15,10 @@
 
   @media (min-width: $desktop-width) {
     padding-left: 158px;
-    padding-top: 75px;
+    padding-top: 80px;
     padding-bottom: 54px;
     margin-bottom: 132px;
+    overflow-y: visible;
   }
 
   &::after {
@@ -40,26 +41,6 @@
 
     @media (min-width: $tablet-width) {
       display: none;
-    }
-
-    @media (min-width: $desktop-width) {
-      content: "";
-      position: absolute;
-      display: block;
-      margin-top: -134px;
-      top: 0;
-      left: 50%;
-      background-image: url("../img/index-background-desktop.png");
-      background-repeat: no-repeat;
-      background-position: 100% 0;
-      width: 50%;
-      height: 681px;
-      z-index: -1;
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/index-background-desktop-@2x.png");
-        background-size: 720px auto;
-      }
     }
   }
 }
@@ -108,7 +89,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    top: -7px;
+    top: 0;
     margin-left: 0;
     left: calc(50% - 162px);
     width: 552px;
