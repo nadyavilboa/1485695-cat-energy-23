@@ -14,38 +14,43 @@
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml"/>
     <link rel="apple-touch-icon" href="img/152.png"/>
     <link rel="manifest" href="manifest.webmanifest"/>
-    <link rel="preload" href="fonts/oswaldregular.woff2" as="font"/>
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous"/>
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous"/>
   </head>
   <body class="page__body">
-    <header class="page-header container">
-      <div class="page-header__wrapper">
-        <a class="page-header__logo page-header__logo--img" href="index.html">
-          <picture>
-            <source media="(min-width: 1280px)" srcset="img/icon_logo-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/icon_logo-tablet.svg">
-            <img class="img-logo" src="img/icon-logo.svg" width="33" height="38" alt="Логотип Кэт-энерджи"/>
-          </picture>
-        </a>
-        <a class="page-header__logo page-header__logo--name" href="index.html">
-          <img class="name-logo" src="img/header-logo-text.svg" width="100" height="18" alt="Текстовый логотип Кэт-энерджи"/>
-        </a>
-        <button class="page-header__toggle page--header__toggle--open display-none" type="button">
-          <span class="visually-hidden">Открыть/закрыть меню</span>
-        </button>
+    <header class="page-header">
+      <div class="container">
+        <div class="page-header__wrapper">
+          <div class="page-header__short-wrapper">
+            <a class="page-header__logo page-header__logo--img" href="index.html">
+              <picture>
+                <source media="(min-width: 1280px)" srcset="img/icon_logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/icon_logo-tablet.svg">
+                <img class="img-logo" src="img/icon-logo.svg" width="33" height="38" alt="Логотип Кэт-энерджи"/>
+              </picture>
+            </a>
+            <a class="page-header__logo page-header__logo--name" href="index.html">
+              <img class="name-logo" src="img/header-logo-text.svg" width="100" height="18" alt="Текстовый логотип Кэт-энерджи"/>
+            </a>
+            <button class="page-header__toggle page--header__toggle--open display-none" type="button">
+              <span class="visually-hidden">Открыть/закрыть меню</span>
+            </button>
+          </div>
+          <nav class="main-nav">
+            <ul class="main-nav__list menu list-reset">
+              <li class="menu__item">
+                <a class="menu__link" href="index.html">Главная</a>
+              </li>
+              <li class="menu__item menu__item--current">
+                <a class="menu__link menu__link--current">Каталог продукции</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="form.html">Подбор программы</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
-      <nav class="main-nav">
-        <ul class="main-nav__list menu list-reset">
-          <li class="menu__item">
-            <a class="menu__link" href="index.html">Главная</a>
-          </li>
-          <li class="menu__item menu__item--current">
-            <a class="menu__link menu__link--current">Каталог продукции</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
     </header>
     <main class="page-main page-main--catalog">
       <h1 class="visually-hidden">Товары и акции</h1>
